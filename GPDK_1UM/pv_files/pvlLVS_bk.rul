@@ -1,0 +1,95 @@
+// PVL LVS RULE CHECK FOR GPDK_1UM
+
+// Version 0.1
+// Author: Saul Rodriguez
+// Date: 2013-08-12
+
+input_scale 2000;
+grid 5;
+unit -length u;
+//text_depth -primary;
+
+layout_preserve_case -property yes
+
+//layer_def empty 999;
+
+// Layer Definitions & Mappings
+
+layer_def M_SD 1000;
+layer_map 2 -datatype 0 1000;
+
+layer_def M_TOP 1001;
+layer_map 5 -datatype 0 1001;
+
+layer_def GRAPH 1003;
+layer_map 3 -datatype 0 1003;
+
+layer_def TOX_N 1004;
+layer_map 4 -datatype 0 1004;
+
+layer_def M_SD_pin 1005;
+layer_map 2 -texttype 251 1005;
+text_layer M_SD_pin;
+port -text_layer M_SD_pin;
+attach M_SD_pin M_SD;
+
+layer_def M_TOP_pin 1006;
+layer_map 5 -texttype 251 1006;
+text_layer M_TOP_pin;
+port -text_layer M_TOP_pin;
+attach M_TOP_pin M_TOP;
+
+layer_def MIM_CAP 1007;
+layer_map 25 -datatype 0 1007;
+
+
+//Creation of auxiliar layers for recognition 
+
+	// GFET
+and M_TOP GRAPH PGATE;
+not GRAPH PGATE PSD;
+
+rule PGATE { copy PGATE; }
+rule PSD { copy PSD; }
+
+	// MIMCAP
+
+and M_TOP MIM_CAP M_CAP1;
+and M_SD MIM_CAP M_CAP2;
+and M_CAP1 M_CAP2 M_CAP;
+
+// Layer Connections
+
+connect M_SD M_TOP -by TOX_N;
+connect M_SD PSD -by M_SD;
+
+connect M_CAP1 M_TOP -by M_TOP;
+connect M_CAP2 M_SD -by M_SD;
+
+// Device Recognition
+
+//extract gfet device
+device M(gfet) PGATE M_TOP(G) PSD(D) PSD(S) [
+  property W, L;
+  W = perimeter_co_out(PGATE,PSD)*0.5;
+  L = perimeter_inside(PGATE,M_TOP)*0.5;
+];
+
+//Parameter comparison options
+lvs_check_property M(gfet) W W -tolerance 3;
+lvs_check_property M(gfet) L L -tolerance 3;
+
+device C(mim_cap) M_CAP M_CAP1 (PLUS) M_CAP2 (MINUS) [
+	property W, L, c, Er, TOX;
+//	property c;
+	W = 10e-6;
+	L = 10e-6;
+	Er = 9.1;
+	TOX = 25e-9;	
+	c = area(M_CAP)*Er*8.854e-12/TOX;	
+//	c = 1e-12;
+];
+
+lvs_check_property C(mim_cap) c c -tolerance 3;
+
+

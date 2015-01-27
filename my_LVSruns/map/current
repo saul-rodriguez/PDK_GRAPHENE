@@ -1,0 +1,26 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "lna_4"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/"
+ )
+( instViewTable
+ )
+( net
+ )
+( inst
+ )
+( model
+( "AMPLIFIERS/power_rail/schematic" "power_rail" )
+( "AMPLIFIERS/lna_4/schematic" "lna_4" )
+ )
+( term
+ )
+( param
+ )
+( "lna_4" "ihnl/cds1/map" )
+( "power_rail" "ihnl/cds0/map" )
+ )

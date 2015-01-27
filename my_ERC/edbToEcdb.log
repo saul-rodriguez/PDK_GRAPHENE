@@ -1,0 +1,13 @@
+
+/afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/PVE121/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+EDB Library dir : basic_resistor_1785.db
+ECDB dir        : ./
+Top Cell        : basic_resistor
+CDL netlist     : ./basic_resistor.net
+Layer map file  : ./basic_resistor.gds.map
+Text map file   : ./basic_resistor.ports
+Float net file : .basic_resistor.info.softchk
+debug           : 0
+Source Library  : basic_resistor_1785

@@ -1,0 +1,16 @@
+case	"preserve"
+convertDot	"node"
+convertPin	"geometry"
+hierDepth	32
+labelCase	"preserve"
+labelDepth	32
+library	"AMPLIFIERS"
+logFile	"/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/PIPO1.LOG"
+maxVertices	2048
+pinAttNum	0
+runDir	"/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC"
+strmFile	"/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.gds"
+strmVersion	5
+techLib	"GPDK_1UM"
+topCell	"basic_resistor"
+view	"layout"

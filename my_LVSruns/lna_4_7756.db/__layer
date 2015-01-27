@@ -1,0 +1,92 @@
+Scale=8000.000000
+Mask		M_SD
+{
+    Number=0
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		M_TOP
+{
+    Number=1
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		GRAPH
+{
+    Number=2
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		TOX_N
+{
+    Number=3
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		M_SD_pin
+{
+    Number=4
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		M_TOP_pin
+{
+    Number=5
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		MIM_CAP
+{
+    Number=6
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		IND
+{
+    Number=7
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		IND_P1
+{
+    Number=8
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		IND_P2
+{
+    Number=9
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		IND_P3
+{
+    Number=10
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		IND_P4
+{
+    Number=11
+    Color=Color11
+    Fill=Empty
+    Line=0
+}
+Mask		RES_GRAPH
+{
+    Number=12
+    Color=Color11
+    Fill=Empty
+    Line=0
+}

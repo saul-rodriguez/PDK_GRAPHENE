@@ -1,0 +1,5 @@
+AMPLIFIERS lna_4 layout lna_4
+AMPLIFIERS power_rail layout power_rail
+GPDK_1UM ind_2n8 layout ind_2n8
+CHIP_FINISH_LIB RF_PAD_100 layout RF_PAD_100
+CHIP_FINISH_LIB PAD_100 layout PAD_100

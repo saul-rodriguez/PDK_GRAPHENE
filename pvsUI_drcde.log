@@ -1,0 +1,18 @@
+Checking out SoftShare license Phys_Ver_Sys_Results_Mgr 12.1 ... succeeded.
+********************************************************************************
+pvstdb 12.1.1-p076 64 bit (Wed May  1 11:26:50 PDT 2013)
+Build Ref No.: 076 (05-01-2013)
+
+Copyright 2013 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+Build O/S:       Linux x86_64 2.6.18-194.el5
+Executed on:     avril.it.kth.se (Linux x86_64 2.6.18-348.4.1.el5)
+Starting Time:   Tue Jan 27 09:56:47 2015 (Tue Jan 27 08:56:47 2015 GMT)
+With parameters: -sf /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.drc_errors.ascii.index /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.drc_errors.ascii /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.drc_errors.ascii.pvstdb 
+********************************************************************************
+
+Waiting for write lock on /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.drc_errors.ascii.index.
+Obtained lock after 0 seconds.
+pvstdb completed.
+Checking in all SoftShare licenses.

@@ -1,0 +1,27 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                          *
+*                                                       *
+* Cell Name  : basic_stage                              *
+* Netlisted  : Wed Aug 28 10:16:16 2013                 *
+* PVS Version: 12.1.1-p076 Wed May  1 11:22:57 PDT 2013 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 L(ind_0n4) IND_SEL IND_1(PLUS) IND_1(MINUS)
+*.DEVTMPLT 1 L(ind_1n5) IND_SEL IND_2(PLUS) IND_2(MINUS)
+*.DEVTMPLT 2 L(ind_2n0) IND_SEL IND_3(PLUS) IND_3(MINUS)
+*.DEVTMPLT 3 L(ind_2n8) IND_SEL IND_4(PLUS) IND_4(MINUS)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: L                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt L PLUS MINUS
+.ends L
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: basic_stage                                 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt basic_stage DS1 DS2 G1 G2 GD
+** N=8 EP=5 FDC=2
+M0 DS1 G2 DS2 gfet W=1e-05 L=2e-06 $X=246000 $Y=36000
+M1 GD G1 DS1 gfet W=1e-05 L=2e-06 $X=264000 $Y=36000
+.ends basic_stage

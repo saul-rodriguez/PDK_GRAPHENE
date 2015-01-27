@@ -1,0 +1,74 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                          *
+*                                                       *
+* Cell Name  : lna_3                                    *
+* Netlisted  : Tue Aug 27 18:00:13 2013                 *
+* PVS Version: 12.1.1-p076 Wed May  1 11:22:57 PDT 2013 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 L(ind_0n4) IND_SEL IND_1(PLUS) IND_1(MINUS)
+*.DEVTMPLT 1 L(ind_1n5) IND_SEL IND_2(PLUS) IND_2(MINUS)
+*.DEVTMPLT 2 L(ind_2n0) IND_SEL IND_3(PLUS) IND_3(MINUS)
+*.DEVTMPLT 3 L(ind_2n8) IND_SEL IND_4(PLUS) IND_4(MINUS)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: L                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt L PLUS MINUS
+.ends L
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: power_rail                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt power_rail GD VD
+** N=2 EP=2 FDC=8
+C0 VD GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=90000 $Y=420000
+C1 VD GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=190000 $Y=420000
+C2 VD GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=290000 $Y=420000
+C3 VD GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=390000 $Y=420000
+C4 VD GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=490000 $Y=420000
+C5 VD GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=590000 $Y=420000
+C6 VD GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=690000 $Y=420000
+C7 VD GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=790000 $Y=420000
+.ends power_rail
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: lna_3                                       *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt lna_3 BIAS1 BIAS2 BIAS3 BIAS4 GD IN OUT VD1 VD2
+** N=30 EP=9 FDC=132
+X0 GD VD1 power_rail $T=220000 2212000 0 90 $X=-280000 $Y=2282000
+X1 GD VD1 power_rail $T=372000 3230000 0 90 $X=-128000 $Y=3300000
+X2 GD VD1 power_rail $T=522000 3230000 0 90 $X=22000 $Y=3300000
+X3 GD VD1 power_rail $T=350000 1282000 0 0 $X=420000 $Y=1702000
+X4 GD VD1 power_rail $T=350000 1440000 0 0 $X=420000 $Y=1860000
+X5 GD VD1 power_rail $T=350000 1592000 0 0 $X=420000 $Y=2012000
+X6 GD VD1 power_rail $T=350000 1732000 0 0 $X=420000 $Y=2152000
+X7 GD VD1 power_rail $T=672000 3616000 0 0 $X=742000 $Y=4036000
+X8 GD VD1 power_rail $T=972000 3714000 0 0 $X=1042000 $Y=4134000
+X9 GD VD1 power_rail $T=1820000 1416000 0 90 $X=1320000 $Y=1486000
+X10 GD VD1 power_rail $T=1986000 2860000 0 90 $X=1486000 $Y=2930000
+X11 GD VD2 power_rail $T=1906000 2220000 0 0 $X=1976000 $Y=2640000
+X12 GD VD2 power_rail $T=2908000 2462000 1 180 $X=2018000 $Y=2882000
+X13 GD VD2 power_rail $T=4046000 2320000 0 90 $X=3546000 $Y=2390000
+M0 18 9 17 gfet W=1e-05 L=2e-06 $X=1702000 $Y=2716000
+M1 11 10 18 gfet W=1e-05 L=2e-06 $X=1702000 $Y=2734000
+M2 19 13 GD gfet W=1e-05 L=2e-06 $X=1964000 $Y=2786000
+M3 14 12 19 gfet W=1e-05 L=2e-06 $X=1964000 $Y=2804000
+C4 IN 16 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=162000 $Y=2660000
+C5 10 GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=1578000 $Y=2784000
+C6 9 17 1.5792e-13 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=1676000 $Y=2678000
+C7 11 13 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=1784000 $Y=2754000
+C8 12 GD 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=2028000 $Y=2730000
+C9 14 GD 7.25143e-13 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=2116000 $Y=2820000
+C10 14 OUT 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=2192000 $Y=2790000
+X36 16 9 L L=2.8e-09 $[ind_2n8] $X=290000 $Y=2670000 $dt=3
+X37 GD 17 L L=2.8e-09 $[ind_2n8] $X=1686000 $Y=1452000 $dt=3
+X38 11 VD1 L L=2.8e-09 $[ind_2n8] $X=1802000 $Y=2972000 $dt=3
+R14 BIAS1 16 10000 L=5e-05 W=5e-06 R_sheet=1000 $[graph_res] $X=224000 $Y=2510000
+R15 10 BIAS2 10000 L=5e-05 W=5e-06 R_sheet=1000 $[graph_res] $X=1458000 $Y=2782000
+R16 BIAS3 13 10000 L=5e-05 W=5e-06 R_sheet=1000 $[graph_res] $X=1912000 $Y=2636000
+R17 14 VD2 100 L=2e-06 W=2e-05 R_sheet=1000 $[graph_res] $X=1964000 $Y=2850000
+R18 14 VD2 100 L=2e-06 W=2e-05 R_sheet=1000 $[graph_res] $X=2018000 $Y=2850000
+R19 12 BIAS4 10000 L=5e-05 W=5e-06 R_sheet=1000 $[graph_res] $X=2184000 $Y=2734000
+.ends lna_3

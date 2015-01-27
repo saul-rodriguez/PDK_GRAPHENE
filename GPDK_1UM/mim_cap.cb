@@ -1,0 +1,21 @@
+procedure(mim_cap(param)
+  prog( (l)
+     l = cdfParseFloatString(cdfgData->l->value)
+     when(l<1e-6 
+       warn("Parameter l is smaller than 1e-6. Setting to minimal value" )
+
+       cdfgData->l->value = "1u"
+
+     )
+	 cdfgData->w->value = cdfgData->l->value
+
+	 l = cdfParseFloatString(cdfgData->l->value)
+	 Er = cdfParseFloatString(cdfgData->Er->value)
+	 TOX = cdfParseFloatString(cdfgData->TOX->value)
+	 c = Er*8.854e-12*l*l/TOX*1e12
+	 ;; c = 0.1
+	 cdfgData->c->value = sprintf(nil "%fp" c)
+  )
+)
+
+

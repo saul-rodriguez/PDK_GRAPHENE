@@ -1,0 +1,53 @@
+/*********************************/
+/* CHARACTERIZATION LIBRARY GFET V1.0 */
+/* Author: Saul Rodriguez        */
+/* Date: 2013-08-17              */
+/*********************************/
+
+simulator( 'spectre )
+design(	 "CHARACTERIZATION" "FAST_BIAS" "schematic")
+; design(	 "/afs/ict.kth.se/home/s/a/saul/simulation/FAST_BIAS/spectre/schematic/netlist/netlist")
+resultsDir( "~/simulation/FAST_BIAS/spectre/schematic" )
+
+;createNetlist
+
+load("OS/CHARACTERIZATION/global.il")
+
+analysis('dc ?saveOppoint t  )
+
+desVar(	  "W3" 3u	)
+desVar(	  "W2" 2u	)
+desVar(	  "W1" 1u	)
+desVar(	  "VDS3" 3	)
+desVar(	  "VDS2" 2	)
+desVar(	  "VDS1" 1	)
+desVar(	  "L3" 3u	)
+desVar(	  "L2" 2u	)
+desVar(	  "L1" 1u	)
+desVar(	  "IDS3" 3m	)
+desVar(	  "IDS2" 2m	)
+desVar(	  "IDS1" 1m	)
+
+desVar(	  "VDS1" VDS1	)
+desVar(	  "IDS1" IDS1	)
+desVar(	  "L1" L1	)
+;desVar(	  "NF1" NF1	)
+desVar(	  "W1" W1	)
+
+desVar(	  "VDS2" VDS2	)
+desVar(	  "IDS2" IDS2	)
+desVar(	  "L2" L2	)
+;desVar(	  "NF2" NF2	)
+desVar(	  "W2" W2	)
+
+desVar(	  "VDS3" VDS3	)
+desVar(	  "IDS3" IDS3	)
+desVar(	  "L3" L3	)
+;desVar(	  "NF3" NF3	)
+desVar(	  "W3" W3	)
+
+envOption(
+	'analysisOrder  list("dc") 
+)
+temp( 27 ) 
+run()

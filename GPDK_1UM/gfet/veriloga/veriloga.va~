@@ -1,0 +1,257 @@
+// VerilogA for GPDK_1UM, gfet, veriloga
+
+/*
+`include "constants.vams"
+`include "disciplines.vams"
+
+module gfet(D, G, S);
+inout D;
+electrical D;
+inout G;
+electrical G;
+inout S;
+electrical S;
+parameter real l = 1u ;
+parameter real w = 1u ;
+parameter real model = gfet ;
+
+
+endmodule
+*/
+
+
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module gfet(D, G, S);
+
+inout D;
+electrical D;
+inout G;
+electrical G;
+inout S; 
+electrical S;
+
+/**************/
+/* Constants  */
+/**************/
+
+`define e 1.6021765e-19      // electron charge [C]
+`define hs 1.054571726e-34   // Planck constant (reduced) [J.s]
+`define hs_eV 6.582119e-16   //Planck constant (reduced) [eV.s]
+`define vf 1e6 			     //Fermi velocity [m/s]
+`define Eo 8.854e-12         // Vacuum permittivity
+`define pi 3.14159265
+
+/**************/
+/* Parameters */
+/**************/
+
+
+/* data from transistor Meric [33], data taken from table 3, Fregonese manus. 2013. */
+
+parameter real l = 1e-6; // length (m)
+parameter real w = 1e-6; // width (m)
+//parameter real l = 440.00n ;
+//parameter real w = 1u ;
+
+
+parameter real Nf = 1e-19;  // Net acceptor and donnor doping
+parameter real TOX = 8.5e-9; // Top dielectric thickness (m)
+parameter real ER =  3.4;// Top dielectric relative permittivity
+parameter real U = 7000.0; //% low field mobility [cm^2/V]
+parameter real hs_w = 56e-3; // surface phonon energy of teh substrate [eV]
+parameter real delta = 66.8e-3; // inhomogeinity of electrostatic potential [V]
+
+/***************/
+/* Functions   */
+/***************/
+
+analog function real integ_1;
+	input z,B,C,sig; 
+	real z,B,C,sig;
+
+	begin
+		integ_1 = -1.0/C*(  3.0*pow(C,4) - 8.0*C*pow( ( pow(C,2.0) + 4*B*z*sig ) , 1.5 ) + 48.0*pow(B,2.0)*pow(z,2.0) + 48.0*B*pow(C,2.0)*z*sig  )/(96.0*pow(B,2.0)*`e*sig);
+	end
+endfunction
+
+
+analog function real integ_2;
+	input z,B,C,sig; 
+	real z,B,C,sig;
+
+	begin
+		integ_2 = -(3.0*pow(C,4.0) - 8*C*pow( (pow(C,2.0) + 4*B*z*sig), 1.5 ) + 48.0*pow(B,2.0)*pow(z,2.0) + 48*B*pow(C,2.0)*z*sig)/(96*pow(B,2.0)*C*`e);
+	end
+endfunction
+
+
+/*****************/
+/* Main function */
+/*****************/
+	
+real U_m;
+real B;
+real C;
+real n_puddle;
+real vgs;
+real vds;
+real z1;
+real z2;
+real sig;
+real out_z1,out_z2;
+real res_z1,res_z2;
+real integral,area;
+real n_puddle_vds;
+real NUM,DEN;
+real we;
+real Qnet_AV;
+real Vsat_av;
+real Eav;
+real QCH;
+real ids;
+real gm;
+real gm_id;
+real gds;
+//real Cq_gs;
+//real Cq_gd;
+real Ctop;
+real Cgs;
+real Cgd;
+real ft;
+
+//real l;
+//real w;
+
+	
+	analog begin
+
+	//	l = l;
+	//	w = w;
+		//$strobe("******* GFET7 Starts ***********");
+
+		U_m = U/10000.0;	
+	
+		//$strobe("U_m = %e", U_m);
+
+		B = pow(`e,3.0)/( `pi*pow((`hs*`vf),2.0) );
+
+		//$strobe("B = %e", B);
+
+		C = `Eo*ER/TOX;
+
+		Ctop = C*w*l;
+
+		//$strobe("C = %e", C);
+
+		n_puddle = pow(delta,2.0)/( `pi*pow(`hs_eV,2.0)*pow(`vf,2.0) );
+
+		//$strobe("n_puddle = %e", n_puddle);
+
+		vgs = V(G,S);
+		vds = V(D,S);
+
+		if (abs(vds) == 0) begin //This is to avoid a limit problem with ddx(QCH)
+			vds = vds + 1e-6;
+		end
+
+		if (abs(vgs) == 0) begin //This is to avoid a limit problem with ddx(QCH)
+			vgs = vgs + 1e-6;
+		end
+
+		/* IDS Current calculation */
+
+		z1 = C*(vgs) + `e*Nf;
+		z2 = C*(vgs - vds) + `e*Nf;
+
+		if (z1 >= 0) begin
+			sig = 1.0;
+		end else begin
+			sig = -1.0;
+		end 
+
+		out_z1 = integ_1(z1,B,C,sig);
+		res_z1 = integ_2(z1,B,C,sig);
+
+		//$strobe("out_z1 = %e", out_z1);
+
+		if (z2 >= 0) begin
+			sig = 1.0;
+		end else begin
+			sig = -1.0;
+		end 
+
+		out_z2 = integ_1(z2,B,C,sig);
+		res_z2 = integ_2(z2,B,C,sig);
+
+		//$strobe("out_z2 = %e", out_z2);
+
+		integral = out_z2 - out_z1;  // integration of abs(Qnet)		
+		area = res_z2 - res_z1; // integration of Qnet
+
+		n_puddle_vds = n_puddle*vds; 
+		
+		NUM = integral + n_puddle_vds;
+		
+		we = hs_w/`hs_eV;
+	
+		Qnet_AV = B*pow( ( (-C + sqrt( pow(C,2.0) + 4.0*B*abs(C*(vgs-vds/2.0)+`e*Nf) ) )/(2.0*B) ) , 2.0 );
+
+		//$strobe("Qnte_AV = %e", Qnet_AV);
+
+		Vsat_av = we/sqrt(`pi*(abs(Qnet_AV)/`e + n_puddle));
+
+		//$strobe("Vsat_av = %e", Vsat_av);
+
+		DEN = l + U_m/Vsat_av*abs(vds);
+
+		ids = `e*U_m*w*NUM/DEN;
+
+		//$strobe("ids = %e", ids);
+
+
+		/* Intrinsic Capacitances calculation */
+
+		//Eav = 1/( (abs(Qnet_AV)+`e*n_puddle)*U_m*w/ids + U_m/Vsat_av);
+		Eav = vds/l;
+
+		//$strobe("Eav = %e", Eav);
+
+		QCH = `e*w/Eav*(-area + n_puddle_vds);
+		
+		//$strobe("QCH = %e", QCH);
+
+
+		/* Assignment of results */
+		gm = ddx(ids, V(G));
+		gds = ddx(ids, V(D));
+		gm_id = gm/ids;		
+
+		Cgs = abs(ddx(QCH, V(G)));
+		//Cgs = Cq_gs*Ctop/(Cq_gs + Ctop);
+
+		//$strobe("Cgs = %e", Cgs);
+
+		Cgd = abs(ddx(QCH, V(D)));
+		//Cgd = Cq_gd*Ctop/(Cq_gd + Ctop);
+
+		//$strobe("Cgd = %e", Cgd);
+
+		ft = abs(gm/(Cgs + Cgd))/(2.0*`pi);
+
+		I(D,S) <+ ids;
+		I(G,S) <+ Cgs*ddt(V(G,S));
+		I(G,D) <+ Cgd*ddt(V(G,D));	
+
+	end
+
+
+endmodule
+
+
+
+
+
+

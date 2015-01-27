@@ -1,0 +1,8 @@
+CADENCE IHNL01070
+$model
+TEST_LIB/test_graph_res_series/schematic test_graph_res_series
+$endmodel
+$net
+$endnet
+$param
+$endparam

@@ -1,0 +1,65 @@
+test_drc 2000
+M_TOP.W.1
+1 1 2 Aug 16 21:36:16 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_TOP.W.1: Metal M_TOP width must be >= 1.0 um
+p 1 4
+4400 -18600
+6000 -18600
+6000 -10000
+4400 -10000
+M_TOP.SP.1
+1 1 2 Aug 16 21:36:16 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_TOP.SP.1: M_TOP to M_TOP spacing must be >= 2 um
+p 1 4
+6000 -18600
+8000 -18200
+8000 -10200
+6000 -10000
+M_SD.W.1
+0 0 2 Aug 16 21:36:16 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_SD.W.1: Metal M_SD width must be >= 1.0 um
+M_SD.SP.1
+0 0 2 Aug 16 21:36:16 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_SD.SP.1: M_SD to M_SD spacing must be >= 2 um
+TOX_N.W.1
+1 1 2 Aug 16 21:36:16 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.W.1: TOX hole width must be >= 4.0 um
+p 1 4
+0 0
+7800 0
+7800 5200
+0 5200
+TOX_N.SP.1
+0 0 2 Aug 16 21:36:16 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.SP.1: TOX hole to TOX hole spacing must be >= 4 um
+TOX_N.E.1
+2 2 2 Aug 16 21:36:16 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.E.1: TOX_N must be inside M_SD/M_TOP
+p 1 4
+17800 -6800
+31200 -6800
+31200 5800
+17800 5800
+p 2 4
+0 0
+1800 0
+1800 5200
+0 5200
+TOX_N.E.2
+1 1 2 Aug 16 21:36:16 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.E.2: Minimum M_SD/M_TOP to TOX_N enclosure >= 0.5 um
+p 1 6
+1800 5196
+7796 5196
+7796 0
+7800 0
+7800 5200
+1800 5200

@@ -1,0 +1,52 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.5 03/11/2013 22:12 (sjfnl005) $
+          : sub-version  IC6.1.5.500.16.2 
+Started at: 14-Aug-2013  10:49:07
+User Name : saul
+Host Name : atlantis.it.kth.se
+Directory : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/streams/ind_1.gds' already exists. It will be overwritten.
+INFO (XSTRM-288): The automatic layer mapping is done by StreamOut and the xStrmOut_layerMap.txt file is generated. This is because either the layer mapping is not provided or the XST_AUTO_LM value is used with the -layerMap option.
+
+Summary of Options :
+library                                 GPDK_1UM
+strmFile                                /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/streams/ind_1.gds
+topCell                                 ind_1
+view                                    layout
+logFile                                 strmOut.log
+techLib                                 GPDK_1UM
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView GPDK_1UM/ind_1/layout as STRUCTURE ind_1
+
+Summary of Objects Translated:
+	Scalar Instances:                       0
+	Array Instances:                        0
+	Polygons:                               0
+	Paths:                                  1
+	Rectangles:                             3
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	Pathsegs:                               0
+	Text:                                   0
+	Cells:                                  1
+
+Elapsed Time: 0.6s   User Time: 0.4s   CPU Time: 0.2s   Peak VM: 258KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

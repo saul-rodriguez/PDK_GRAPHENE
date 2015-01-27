@@ -1,0 +1,215 @@
+********************************************************************************
+pvs 12.1.1-p076 64 bit (Wed May  1 11:22:57 PDT 2013)
+Build Ref No.: 076 (05-01-2013)
+
+Copyright 2013 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+Build O/S:       Linux x86_64 2.6.18-194.el5
+Executed on:     atlantis.it.kth.se (Linux x86_64 2.6.18-348.4.1.el5)
+Starting Time:   Fri Aug 23 11:30:06 2013 (Fri Aug 23 09:30:06 2013 GMT)
+With parameters: -drc -get_rules /tmp/pvsrng.15179@atlantis.it.kth.se.1 -get_options /tmp/pvsoptpar.15179@atlantis.it.kth.se.1 -gen_tags /tmp/pvsgentags.15179@atlantis.it.kth.se.1 -tc top -gds /dev/null -control /tmp/ipvsRulesCheckControl.15179@atlantis.it.kth.se.1 /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc 
+********************************************************************************
+
+
+########################################################################
+Get host info ...
+########################################################################
+CPU info:
+    model name      :  AMD Opteron(tm) Processor 6172
+    cpu MHz         :  2100.042
+    cache size      :  512 KB
+    physical cores  :  24
+    logical cores   :  24
+
+Memory info:
+    64452M physical memory installed.
+
+    MemTotal:     66001100 kB
+    MemFree:       3392068 kB
+    Buffers:       7196808 kB
+    Cached:       35116532 kB
+    SwapCached:         12 kB
+    Active:       19833880 kB
+    Inactive:     27329896 kB
+    HighTotal:           0 kB
+    HighFree:            0 kB
+    LowTotal:     66001100 kB
+    LowFree:       3392068 kB
+    SwapTotal:    32764556 kB
+    SwapFree:     32764544 kB
+    Dirty:          396696 kB
+    Writeback:           0 kB
+    AnonPages:     4846404 kB
+    Mapped:         348844 kB
+    Slab:         15330072 kB
+    PageTables:      31980 kB
+    NFS_Unstable:        0 kB
+    Bounce:              0 kB
+    CommitLimit:  65765104 kB
+    Committed_AS:  7377564 kB
+    VmallocTotal: 34359738367 kB
+    VmallocUsed:    293100 kB
+    VmallocChunk: 34359444775 kB
+    HugePages_Total:     0
+    HugePages_Free:      0
+    HugePages_Rsvd:      0
+    Hugepagesize:     2048 kB
+
+
+########################################################################
+Parsing Control File /tmp/ipvsRulesCheckControl.15179@atlantis.it.kth.se.1 ...
+########################################################################
+RESULTS_DB -drc "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/graph_res.drc_errors.ascii" -ascii;
+
+########################################################################
+Parsing Rule File /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc ...
+########################################################################
+LAYOUT_PATH "CELLNAME.gds" gdsii;
+[WARN] Cmd-line override: LAYOUT_PATH "/dev/null";
+LAYOUT_PRIMARY "CELLNAME";
+[WARN] Cmd-line override: LAYOUT_PRIMARY "top";
+RESULTS_DB -drc "CELLNAME.db" -ascii;
+[WARN]: RESULTS_DB -ascii at line 10 in file test.drc is skipped. It is set in control file.
+INPUT_SCALE 2000;
+GRID 5;
+UNIT -length u;
+TEXT_DEPTH -primary;
+FLAG -nonsimple yes;
+LAYER_DEF M_SD 1000;
+LAYER_MAP 2 -datatype 0 1000;
+LAYER_DEF M_TOP 1001;
+LAYER_MAP 5 -datatype 0 1001;
+LAYER_DEF GRAPH 1003;
+LAYER_MAP 3 -datatype 0 1003;
+LAYER_DEF TOX_N 1004;
+LAYER_MAP 4 -datatype 0 1004;
+LAYER_DEF M_SD_pin 1005;
+LAYER_MAP 2 -texttype 251 1005;
+TEXT_LAYER M_SD_pin;
+PORT -text_layer M_SD_pin;
+LAYER_DEF M_TOP_pin 1006;
+LAYER_MAP 5 -texttype 251 1006;
+TEXT_LAYER M_TOP_pin;
+PORT -text_layer M_TOP_pin;
+LAYER_DEF MIM_CAP 1007;
+LAYER_MAP 25 -datatype 0 1007;
+LAYER_DEF IND 1008;
+LAYER_MAP 26 -datatype 0 1008;
+LAYER_DEF IND_P1 1009;
+LAYER_MAP 27 -datatype 0 1009;
+LAYER_DEF IND_P2 1010;
+LAYER_MAP 28 -datatype 0 1010;
+LAYER_DEF IND_P3 1011;
+LAYER_MAP 29 -datatype 0 1011;
+LAYER_DEF IND_P4 1012;
+LAYER_MAP 30 -datatype 0 1012;
+LAYER_DEF GRAPH_RES 1013;
+LAYER_MAP 31 -datatype 0 1013;
+NOT M_TOP IND M_TOP_conn;
+AND M_SD M_TOP m_SD_TOP;
+
+RULE M_TOP.W.1 {
+    CAPTION M_TOP.W.1: Metal M_TOP width must be >= 1.0 um;
+    INTE M_TOP -lt 1 -output region -singular -abut lt 90;
+}
+
+RULE M_TOP.SP.1 {
+    CAPTION M_TOP.SP.1: M_TOP to M_TOP spacing must be >= 2 um;
+    EXTE M_TOP M_TOP -lt 2 -output region -singular -abut lt 90;
+}
+
+RULE M_SD.W.1 {
+    CAPTION M_SD.W.1: Metal M_SD width must be >= 1.0 um;
+    INTE M_SD -lt 1 -output region -singular -abut lt 90;
+}
+
+RULE M_SD.SP.1 {
+    CAPTION M_SD.SP.1: M_SD to M_SD spacing must be >= 2 um;
+    EXTE M_SD M_SD -lt 2 -output region -singular -abut lt 90;
+}
+
+RULE TOX_N.W.1 {
+    CAPTION TOX_N.W.1: TOX hole width must be >= 4.0 um;
+    INTE TOX_N -lt 4 -output region -singular -abut lt 90;
+}
+
+RULE TOX_N.SP.1 {
+    CAPTION TOX_N.SP.1: TOX hole to TOX hole spacing must be >= 4 um;
+    EXTE TOX_N TOX_N -lt 4 -output region -singular -abut lt 90;
+}
+
+RULE TOX_N.E.1 {
+    CAPTION TOX_N.E.1: TOX_N must be inside M_SD/M_TOP;
+    NOT TOX_N M_SD_TOP TOX_Naux;
+    COPY TOX_Naux;
+}
+
+RULE TOX_N.E.2 {
+    CAPTION TOX_N.E.2: Minimum M_SD/M_TOP to TOX_N enclosure >= 0.5 um;
+    ENC M_SD_TOP TOX_N -lt 0.5 -output region -singular -abut lt 90;
+}
+NOT M_TOP_conn M_SD M_TOP_gate;
+AND M_TOP_gate GRAPH PGATE;
+NOT GRAPH PGATE PSD;
+
+RULE M_TOP_gate {
+    COPY M_TOP_gate;
+}
+
+RULE PGATE {
+    COPY PGATE;
+}
+
+RULE PSD {
+    COPY PSD;
+}
+AND GRAPH_RES GRAPH RES_aux;
+AND RES_aux M_SD RES_T;
+NOT RES_aux RES_T RES;
+
+RULE RES_T {
+    COPY RES_T;
+}
+
+RULE RES {
+    COPY RES;
+}
+
+
+########################################################################
+Optimizing Rules ...
+########################################################################
+Completed execution early, as requested by the "-get_rules" or "-gen_tags"
+
+   ONE LAYER BOOLEAN: Cumulative Time CPU =        0(s) REAL =        0(s)
+   TWO LAYER BOOLEAN: Cumulative Time CPU =        0(s) REAL =        0(s)
+ POLYGON TOPOLOGICAL: Cumulative Time CPU =        0(s) REAL =        0(s)
+ POLYGON MEASUREMENT: Cumulative Time CPU =        0(s) REAL =        0(s)
+                SIZE: Cumulative Time CPU =        0(s) REAL =        0(s)
+    EDGE TOPOLOGICAL: Cumulative Time CPU =        0(s) REAL =        0(s)
+    EDGE MEASUREMENT: Cumulative Time CPU =        0(s) REAL =        0(s)
+               STAMP: Cumulative Time CPU =        0(s) REAL =        0(s)
+       ONE LAYER DRC: Cumulative Time CPU =        0(s) REAL =        0(s)
+       TWO LAYER DRC: Cumulative Time CPU =        0(s) REAL =        0(s)
+            NET AREA: Cumulative Time CPU =        0(s) REAL =        0(s)
+             DENSITY: Cumulative Time CPU =        0(s) REAL =        0(s)
+       MISCELLANEOUS: Cumulative Time CPU =        0(s) REAL =        0(s)
+             CONNECT: Cumulative Time CPU =        0(s) REAL =        0(s)
+              DEVICE: Cumulative Time CPU =        0(s) REAL =        0(s)
+                 ERC: Cumulative Time CPU =        0(s) REAL =        0(s)
+       PATTERN_MATCH: Cumulative Time CPU =        0(s) REAL =        0(s)
+
+
+Total CPU Time                    : 0(s)
+Total Real Time                   : 0(s)
+Peak Memory Used                  : 1(M)
+Total Original Geometry           : 0(0)
+Total DRC RuleChecks              : 0
+Total DRC Results                 : 0 (0)
+[WARN] Cannot open summary file.
+
+
+Design Rule Check Finished Normally. Fri Aug 23 11:30:06 2013
+
+

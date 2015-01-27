@@ -1,0 +1,395 @@
+********************************************************************************
+pvs 12.1.1-p076 64 bit (Wed May  1 11:22:57 PDT 2013)
+Build Ref No.: 076 (05-01-2013)
+
+Copyright 2013 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+Build O/S:       Linux x86_64 2.6.18-194.el5
+Executed on:     atlantis.it.kth.se (Linux x86_64 2.6.18-348.4.1.el5)
+Starting Time:   Fri Aug 23 10:30:53 2013 (Fri Aug 23 08:30:53 2013 GMT)
+With parameters: -erc -get_options /tmp/pvsoptpar.15179@atlantis.it.kth.se.1 -gen_tags /tmp/pvsgentags.15179@atlantis.it.kth.se.1 -p -tc top -gds /dev/null -control /tmp/ipvsRulesCheckControl.15179@atlantis.it.kth.se.1 /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/.technology.rul.15179@atlantis.it.kth.se.1 
+********************************************************************************
+
+
+########################################################################
+Get host info ...
+########################################################################
+CPU info:
+    model name      :  AMD Opteron(tm) Processor 6172
+    cpu MHz         :  2100.042
+    cache size      :  512 KB
+    physical cores  :  24
+    logical cores   :  24
+
+Memory info:
+    64452M physical memory installed.
+
+    MemTotal:     66001100 kB
+    MemFree:       3538760 kB
+    Buffers:       7196372 kB
+    Cached:       35065684 kB
+    SwapCached:         12 kB
+    Active:       19713708 kB
+    Inactive:     27319648 kB
+    HighTotal:           0 kB
+    HighFree:            0 kB
+    LowTotal:     66001100 kB
+    LowFree:       3538760 kB
+    SwapTotal:    32764556 kB
+    SwapFree:     32764544 kB
+    Dirty:          494892 kB
+    Writeback:           0 kB
+    AnonPages:     4768864 kB
+    Mapped:         335228 kB
+    Slab:         15318032 kB
+    PageTables:      29652 kB
+    NFS_Unstable:        0 kB
+    Bounce:              0 kB
+    CommitLimit:  65765104 kB
+    Committed_AS:  7161036 kB
+    VmallocTotal: 34359738367 kB
+    VmallocUsed:    293100 kB
+    VmallocChunk: 34359444775 kB
+    HugePages_Total:     0
+    HugePages_Free:      0
+    HugePages_Rsvd:      0
+    Hugepagesize:     2048 kB
+
+
+########################################################################
+Parsing Control File /tmp/ipvsRulesCheckControl.15179@atlantis.it.kth.se.1 ...
+########################################################################
+RESULTS_DB -erc "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/graph_res.erc_errors.ascii" -ascii;
+
+########################################################################
+Parsing Rule File /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/.technology.rul.15179@atlantis.it.kth.se.1 ...
+########################################################################
+TECHNOLOGY GPDK_1UM -ruleSet default -techLib /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pvtech.lib;
+[INFO]: TECHNOLOGY: Rules file /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/./pvlLVS.rul will be included after the remainder of the current rules are processed.
+[INFO]: TECHNOLOGY GPDK_1UM -techLib /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pvtech.lib: End of additions.
+INPUT_SCALE 2000;
+GRID 5;
+UNIT -length u;
+LAYOUT_PRESERVE_CASE -property yes;
+LAYER_DEF M_SD 1000;
+LAYER_MAP 2 -datatype 0 1000;
+LAYER_DEF M_TOP 1001;
+LAYER_MAP 5 -datatype 0 1001;
+LAYER_DEF GRAPH 1003;
+LAYER_MAP 3 -datatype 0 1003;
+LAYER_DEF TOX_N 1004;
+LAYER_MAP 4 -datatype 0 1004;
+LAYER_DEF M_SD_pin 1005;
+LAYER_MAP 2 -texttype 251 1005;
+TEXT_LAYER M_SD_pin;
+PORT -text_layer M_SD_pin;
+LAYER_DEF M_TOP_pin 1006;
+LAYER_MAP 5 -texttype 251 1006;
+TEXT_LAYER M_TOP_pin;
+PORT -text_layer M_TOP_pin;
+LAYER_DEF MIM_CAP 1007;
+LAYER_MAP 25 -datatype 0 1007;
+LAYER_DEF IND 1008;
+LAYER_MAP 26 -datatype 0 1008;
+LAYER_DEF IND_P1 1009;
+LAYER_MAP 27 -datatype 0 1009;
+LAYER_DEF IND_P2 1010;
+LAYER_MAP 28 -datatype 0 1010;
+LAYER_DEF IND_P3 1011;
+LAYER_MAP 29 -datatype 0 1011;
+LAYER_DEF IND_P4 1012;
+LAYER_MAP 30 -datatype 0 1012;
+LAYER_DEF GRAPH_RES 1013;
+LAYER_MAP 31 -datatype 0 1013;
+NOT M_TOP IND M_TOP_conn;
+NOT M_TOP_conn M_SD M_TOP_gate;
+AND M_TOP_gate GRAPH PGATE;
+NOT GRAPH PGATE PSD;
+
+RULE PGATE {
+    COPY PGATE;
+}
+
+RULE PSD {
+    COPY PSD;
+}
+AND M_TOP_conn MIM_CAP M_CAP1;
+AND M_SD MIM_CAP M_CAP2;
+AND M_CAP1 M_CAP2 M_CAP;
+AND IND M_TOP IND_TOP;
+AND IND M_SD IND_SD;
+OR IND_TOP IND_SD IND_SEL;
+AND IND_SEL IND_P1 LAUX1;
+NOT LAUX1 IND_P2 LAUX2;
+NOT LAUX2 IND_P3 LAUX3;
+NOT LAUX3 IND_P4 IND_1;
+AND IND_SEL IND_P2 LAUX4;
+NOT LAUX4 IND_P1 LAUX5;
+NOT LAUX5 IND_P3 LAUX6;
+NOT LAUX6 IND_P4 IND_2;
+AND LAUX1 LAUX4 LAUX7;
+NOT LAUX7 IND_P3 LAUX8;
+NOT LAUX8 IND_P4 IND_3;
+AND IND_SEL IND_P3 LAUX9;
+NOT LAUX9 IND_P1 LAUX10;
+NOT LAUX10 IND_P2 LAUX11;
+NOT LAUX11 IND_P4 IND_4;
+
+RULE IND_SEL {
+    COPY IND_SEL;
+}
+
+RULE IND_1 {
+    COPY IND_1;
+}
+AND GRAPH_RES GRAPH RES;
+AND RES M_SD RES_T;
+CONNECT M_SD M_TOP_conn -by TOX_N;
+CONNECT M_SD PSD -by M_SD;
+CONNECT M_TOP_gate M_TOP_conn -by M_TOP_conn;
+CONNECT M_CAP1 M_TOP_conn -by M_TOP_conn;
+CONNECT M_CAP2 M_SD -by M_SD;
+CONNECT IND_1 M_TOP_conn -by M_TOP_conn;
+CONNECT IND_2 M_TOP_conn -by M_TOP_conn;
+CONNECT IND_3 M_TOP_conn -by M_TOP_conn;
+CONNECT IND_4 M_TOP_conn -by M_TOP_conn;
+CONNECT RES_T M_SD -by M_SD;
+ATTACH M_SD_pin M_SD;
+ATTACH M_TOP_pin M_TOP_conn;
+DEVICE M ( gfet ) PGATE M_TOP_gate ( G ) PSD ( D ) PSD ( S ) [ 
+ property W , L 
+ W = perimeter_co_out ( PGATE , PSD ) *0.5 
+ L = perimeter_inside ( PGATE , M_TOP_gate ) *0.5 
+ ];
+LVS_CHECK_PROPERTY M ( gfet ) W W -tolerance 3;
+LVS_CHECK_PROPERTY M ( gfet ) L L -tolerance 3;
+DEVICE C ( mim_cap ) M_CAP M_CAP1 ( PLUS ) M_CAP2 ( MINUS ) [ 
+ property W , L , c , Er , TOX 
+ W = 1e-05 
+ L = 1e-05 
+ Er = 9.1 
+ TOX = 2.5e-08 
+ c = area ( M_CAP ) *Er*8.854e-12 / TOX 
+ ];
+LVS_CHECK_PROPERTY C ( mim_cap ) c c -tolerance 3;
+DEVICE L ( ind_0n4 ) IND_SEL IND_1 ( PLUS ) IND_1 ( MINUS ) [ 
+ property L 
+ L = 4e-10 
+ ];
+DEVICE L ( ind_1n5 ) IND_SEL IND_2 ( PLUS ) IND_2 ( MINUS ) [ 
+ property L 
+ L = 1.5e-09 
+ ];
+DEVICE L ( ind_2n0 ) IND_SEL IND_3 ( PLUS ) IND_3 ( MINUS ) [ 
+ property L 
+ L = 2e-09 
+ ];
+DEVICE L ( ind_2n8 ) IND_SEL IND_4 ( PLUS ) IND_4 ( MINUS ) [ 
+ property L 
+ L = 2.8e-09 
+ ];
+DEVICE R ( graph_res ) RES RES_T ( PLUS ) RES_T ( MINUS ) [ 
+ property R , W , L , R_sheet 
+ R_sheet = 1000 
+ L = perimeter_outside ( RES , RES_T ) / 2 
+ W = perimeter_coincide ( RES , RES_T ) / 2 
+ R = R_sheet*L / W 
+ ];
+Operation 'COPY' at line 77 in file pvlLVS.rul is not selected for executing, remove it.
+Operation 'COPY' at line 114 in file pvlLVS.rul is not selected for executing, remove it.
+
+
+operation group: 1/29
+    M_TOP_conn = NOT M_TOP IND
+========================================================================
+
+
+operation group: 2/29
+    M_TOP_gate = NOT M_TOP_conn M_SD
+========================================================================
+
+
+operation group: 3/29
+    PGATE = AND M_TOP_gate GRAPH
+========================================================================
+
+
+operation group: 4/29
+    PSD = NOT GRAPH PGATE
+========================================================================
+
+
+operation group: 5/29
+    M_CAP1 = AND M_TOP_conn MIM_CAP
+========================================================================
+
+
+operation group: 6/29
+    M_CAP2 = AND M_SD MIM_CAP
+========================================================================
+
+
+operation group: 7/29
+    IND_TOP = AND IND M_TOP
+========================================================================
+
+
+operation group: 8/29
+    IND_SD = AND IND M_SD
+========================================================================
+
+
+operation group: 9/29
+    IND_SEL = OR IND_TOP IND_SD
+========================================================================
+
+
+operation group: 10/29
+    LAUX1 = AND IND_SEL IND_P1
+========================================================================
+
+
+operation group: 11/29
+    LAUX2 = NOT LAUX1 IND_P2
+========================================================================
+
+
+operation group: 12/29
+    LAUX3 = NOT LAUX2 IND_P3
+========================================================================
+
+
+operation group: 13/29
+    IND_1 = NOT LAUX3 IND_P4
+========================================================================
+
+
+operation group: 14/29
+    LAUX4 = AND IND_SEL IND_P2
+========================================================================
+
+
+operation group: 15/29
+    LAUX5 = NOT LAUX4 IND_P1
+========================================================================
+
+
+operation group: 16/29
+    LAUX6 = NOT LAUX5 IND_P3
+========================================================================
+
+
+operation group: 17/29
+    IND_2 = NOT LAUX6 IND_P4
+========================================================================
+
+
+operation group: 18/29
+    LAUX7 = AND LAUX1 LAUX4
+========================================================================
+
+
+operation group: 19/29
+    LAUX8 = NOT LAUX7 IND_P3
+========================================================================
+
+
+operation group: 20/29
+    IND_3 = NOT LAUX8 IND_P4
+========================================================================
+
+
+operation group: 21/29
+    LAUX9 = AND IND_SEL IND_P3
+========================================================================
+
+
+operation group: 22/29
+    LAUX10 = NOT LAUX9 IND_P1
+========================================================================
+
+
+operation group: 23/29
+    LAUX11 = NOT LAUX10 IND_P2
+========================================================================
+
+
+operation group: 24/29
+    IND_4 = NOT LAUX11 IND_P4
+========================================================================
+
+
+operation group: 25/29
+    RES = AND GRAPH_RES GRAPH
+========================================================================
+
+
+operation group: 26/29
+    RES_T = AND RES M_SD
+========================================================================
+
+
+operation group: 27/29
+    CONNECT M_SD M_TOP_conn -by TOX_N
+    CONNECT M_SD PSD -by M_SD
+    CONNECT M_TOP_gate M_TOP_conn -by M_TOP_conn
+    CONNECT M_CAP1 M_TOP_conn -by M_TOP_conn
+    CONNECT M_CAP2 M_SD -by M_SD
+    CONNECT IND_1 M_TOP_conn -by M_TOP_conn
+    CONNECT IND_2 M_TOP_conn -by M_TOP_conn
+    CONNECT IND_3 M_TOP_conn -by M_TOP_conn
+    CONNECT IND_4 M_TOP_conn -by M_TOP_conn
+    CONNECT RES_T M_SD -by M_SD
+========================================================================
+
+
+operation group: 28/29
+    M_CAP = AND M_CAP1 M_CAP2
+========================================================================
+
+
+operation group: 29/29
+    DEVICE M( gfet) PGATE M_TOP_gate( G) PSD( S) PSD( D) [
+		W = (perim_co_out(PGATE, PSD) * 0.5)
+		L = (perim_in(PGATE, M_TOP_gate) * 0.5)
+	]
+
+    DEVICE C( mim_cap) M_CAP M_CAP1( PLUS) M_CAP2( MINUS) [
+		W = 1e-05
+		L = 1e-05
+		Er = 9.1
+		TOX = 2.5e-08
+		c = (((area(M_CAP) * Er) * 8.854e-12) / TOX)
+	]
+
+    DEVICE L( ind_0n4) IND_SEL IND_1( PLUS) IND_1( MINUS) [
+		L = 4e-10
+	]
+
+    DEVICE L( ind_1n5) IND_SEL IND_2( PLUS) IND_2( MINUS) [
+		L = 1.5e-09
+	]
+
+    DEVICE L( ind_2n0) IND_SEL IND_3( PLUS) IND_3( MINUS) [
+		L = 2e-09
+	]
+
+    DEVICE L( ind_2n8) IND_SEL IND_4( PLUS) IND_4( MINUS) [
+		L = 2.8e-09
+	]
+
+    DEVICE R( graph_res) RES RES_T( PLUS) RES_T( MINUS) [
+		R_sheet = 1000
+		L = (perim_out(RES, RES_T) / 2)
+		W = (perim_co(RES, RES_T) / 2)
+		R = ((R_sheet * L) / W)
+	]
+
+========================================================================
+Completed execution after parsing the rules, as requested by the "-p" flag or "-get_rules" flag 
+
+
+Netlist Extraction Finished Normally. Fri Aug 23 10:30:53 2013
+
+

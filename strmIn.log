@@ -1,0 +1,43 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream In
+Program   : @(#)$CDS: strmin version 6.1.5 03/11/2013 22:12 (sjfdl225) $
+          : sub-version  IC6.1.5.500.16.2 
+Started at: 09-Aug-2013  17:41:15
+User Name : saul
+Host Name : atlantis.it.kth.se
+Directory : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-107): Existing cells in the target library may be overwritten if the cell name in the Stream file is same as the cell name in the target library. Specify the Do Not Overwrite Existing Cells option and try again.
+INFO (XSTRM-217): Reading the layer map file, /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/tempo/ind_1n5/LayerMap.map
+
+Summary of Options:
+	library				GPDK_1UM
+	strmFile			/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/tempo/ind_1n5/ind_1n5_2G4_SGS.gds
+	logFile				strmIn.log
+	topCell				ind_1n5_2G4_SGS
+	view				layout
+	case				Preserve
+	layerMap			/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/tempo/ind_1n5/LayerMap.map
+	propSeparator			,
+	attachTechFileOfLib				GPDK_1UM
+
+INFO (XSTRM-284): Data precision may be lost. This is because of the value "2000" of the dbuPerUU in tech database do not match with the Units "10000" in the GDSII file.
+INFO (XSTRM-220): 1. Translating STRUCTURE ind_1n5_2G4_SGS as cellView GPDK_1UM/ind_1n5_2G4_SGS/layout
+
+Summary of Objects Translated:
+	Instances:                              0
+	Arrays:                                 0
+	Polygons:                               3
+	Paths:                                  0
+	PathSegs:                               0
+	Rectangles:                             16
+	Text:                                   0
+	Node:                                   0
+	Line:                                   0
+	Cells:                                  1
+
+Elapsed Time: 0.5s   User Time: 0.4s   CPU Time: 0.2s   Peak VM: 236KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

@@ -1,0 +1,145 @@
+// PVS DRC RULE DECK FOR GPDK_1UM
+
+// Version 0.1
+// Author: Saul Rodriguez
+// Date: 2013-08-14
+
+
+layout_path "CELLNAME.gds" gdsii;
+layout_primary "CELLNAME";
+results_db -drc "CELLNAME.db" -ascii;
+
+input_scale 2000;
+grid 5;
+unit -length u;
+text_depth -primary;
+
+flag -nonsimple yes;
+
+// Layer Definitions & Mappings
+
+layer_def M_SD 1000;
+layer_map 2 -datatype 0 1000;
+
+layer_def M_TOP 1001;
+layer_map 5 -datatype 0 1001;
+
+layer_def GRAPH 1003;
+layer_map 3 -datatype 0 1003;
+
+layer_def TOX_N 1004;
+layer_map 4 -datatype 0 1004;
+
+layer_def M_SD_pin 1005;
+layer_map 2 -texttype 251 1005;
+text_layer M_SD_pin;
+port -text_layer M_SD_pin;
+//attach M_SD_pin M_SD;
+
+layer_def M_TOP_pin 1006;
+layer_map 5 -texttype 251 1006;
+text_layer M_TOP_pin;
+port -text_layer M_TOP_pin;
+//attach M_TOP_pin M_TOP;
+
+layer_def MIM_CAP 1007;
+layer_map 25 -datatype 0 1007;
+
+layer_def IND 1008;
+layer_map 26 -datatype 0 1008;
+
+layer_def IND_P1 1009;
+layer_map 27 -datatype 0 1009;
+
+layer_def IND_P2 1010;
+layer_map 28 -datatype 0 1010;
+
+layer_def IND_P3 1011;
+layer_map 29 -datatype 0 1011;
+
+layer_def IND_P4 1012;
+layer_map 30 -datatype 0 1012;
+
+//auxiliar layers
+
+// overlap M_SD and M_TOP
+and M_SD M_TOP m_SD_TOP;
+
+// width check for M_TOP < 2um
+rule M_TOP.W.1 {
+	caption M_TOP.W.1: Metal M_TOP width must be >= 2.0 um;
+	inte M_TOP -lt 2.0 -output region -singular -abut lt 90;
+	//caption M_TOP.W.1: Metal M_TOP width must be >= 4.0 um;
+	//inte M_TOP -lt 4.0 -output region -singular -abut lt 90;  
+}
+
+// spacing check for M_TOP < 2um 
+rule M_TOP.SP.1 {
+    caption M_TOP.SP.1: M_TOP to M_TOP spacing must be >= 2 um;
+    exte M_TOP M_TOP -lt 2.0 -output region -singular -abut lt 90;
+    //caption M_TOP.SP.1: M_TOP to M_TOP spacing must be >= 4 um;
+    //exte M_TOP M_TOP -lt 4.0 -output region -singular -abut lt 90;
+}
+
+
+// width check for M_SD < 1um
+rule M_SD.W.1 {
+	//caption M_SD.W.1: Metal M_SD width must be >= 1.0 um;
+	//inte M_SD -lt 1.0 -output region -singular -abut lt 90;
+	caption M_SD.W.1: Metal M_SD width must be >= 4.0 um;
+	inte M_SD -lt 4.0 -output region -singular -abut lt 90;  
+}
+
+// spacing check for M_SD < 2um 
+rule M_SD.SP.1 {
+    caption M_SD.SP.1: M_SD to M_SD spacing must be >= 2 um;
+    exte M_SD M_SD -lt 2.0 -output region -singular -abut lt 90;
+}
+
+// width check for TOX_N < 4um
+rule TOX_N.W.1 {
+	caption TOX_N.W.1: TOX hole width must be >= 4.0 um;
+	inte TOX_N -lt 4.0 -output region -singular -abut lt 90; 
+}
+
+// spacing check for TOX_N < 4um 
+rule TOX_N.SP.1 {
+    caption TOX_N.SP.1: TOX hole to TOX hole spacing must be >= 4 um;
+    exte TOX_N TOX_N -lt 4.0 -output region -singular -abut lt 90;
+}
+
+// check for check of TOX_N outside M_SD & M_TOP
+rule TOX_N.E.1 {
+	caption TOX_N.E.1: TOX_N must be inside M_SD/M_TOP;
+	not TOX_N M_SD_TOP TOX_Naux;
+	copy TOX_Naux;
+}
+
+// enclosure check for TOX_N inside M_SD & M_TOP 
+rule TOX_N.E.2 {
+	caption TOX_N.E.2: Minimum M_SD/M_TOP to TOX_N enclosure >= 0.5 um;
+	enc M_SD_TOP TOX_N -lt 0.5 -output region -singular -abut lt 90;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

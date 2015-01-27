@@ -1,0 +1,24 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "test_graph_res_series"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_CDL"
+ )
+( instViewTable
+ )
+( net
+ )
+( inst
+ )
+( model
+( "TEST_LIB/test_graph_res_series/schematic" "test_graph_res_series" )
+ )
+( term
+ )
+( param
+ )
+( "test_graph_res_series" "ihnl/cds0/map" )
+ )

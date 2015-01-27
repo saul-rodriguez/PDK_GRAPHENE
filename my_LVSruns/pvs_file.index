@@ -1,0 +1,59 @@
+"Cadence Directory" internal none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/.cadence/
+"Current Directory" internal none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE
+"GUI Flow" internal none virtuoso6
+"GUI Preset" internal none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/.preset.autosave
+"Job Signature" internal none IPVS_1422349956_6602
+"PVS Job Mode" internal none lvs
+"Run Directory" internal none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns
+"Technology Mapping File" internal none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pvtech.lib
+"Technology Name" internal none "GPDK_1UM"
+"Technology Rule File" internal none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/.technology.rul
+"Technology RuleSet" internal none "default"
+"PVS Version" internal none 12.1.1-p076
+"Binary Name" internal none ipvs
+"PVS Build Date" internal none "Wed May  1 11:22:02 PDT 2013"
+"PVS Job Time" internal none 1422349958
+"CDL Out Display Pin Information" internal none ENABLED
+"CDL Out Stop List" internal text auCdl
+"CDL Out View List" internal text auCdl schematic
+"Control File" input text /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/pvslvsctl
+"DFII version" internal none 6.1.5.17
+"Do not check rules files before run" internal none ENABLED
+"Extracted Spice File" output text /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.spi
+"Input Layout" input none OA: AMPLIFIERS lna_4 layout
+"Input Schematic" input none OA: AMPLIFIERS lna_4 schematic
+"Intermediate GDSII File" output none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds
+"Intermediate GDSII File creation Errors" output none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/PIPO1.LOG
+"Intermediate OASIS File creation Errors" output none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/PIPO1.LOG
+"Layout Cell Name" internal none lna_4
+"Layout ConvertPin" internal text geometry
+"Layout GDSII" input none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds
+"Layout HierDepth" internal none 32
+"Layout Library Name" internal none AMPLIFIERS
+"Layout MaxVertices" internal none 2048
+"Layout Scale" internal none 0.0005
+"Layout TechLib" internal none GPDK_1UM
+"Layout Top Cell" internal none lna_4
+"Layout View Name" internal none layout
+"Output Layout Cellmap I" internal text /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lay_cellMap.txt
+"PIPO Log I" log text  /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/PIPO1.LOG
+"PIPO Output I" internal text  /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/PIPO1.OUT
+"PIPO Setup File I" internal text  /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/pipo1.setup
+"PVS Job Log" log text /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/pvsuilvs.log
+"PVS Job Mode" internal none lvs
+"Rule File" input text /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/.technology.rul
+"Run Directory" internal none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns
+"SI Log" log text  /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/SI.LOG
+"SI OSS Directory" internal none /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/
+"SI Output" log text  /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/SI.OUT
+"SI Setup File" internal text  /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/si.env
+"Schematic Cell Name" internal none lna_4
+"Schematic Library Name" internal none AMPLIFIERS
+"Schematic Netlist" output text /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.cdl
+"Schematic Top Cell" internal none lna_4
+"Schematic View Name" internal none schematic
+"Simulator Mode" internal none auCdl
+"PVS Version" internal none 12.1.1-p076
+"Binary Name" internal none pvsvirt
+"PVS Build Date" internal none "Wed May  1 11:27:00 PDT 2013"
+"PVS Job Time" internal none 1422349964

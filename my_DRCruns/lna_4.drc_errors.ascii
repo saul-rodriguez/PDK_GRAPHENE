@@ -1,0 +1,45 @@
+lna_4 2000
+M_TOP.W.1
+3 3 2 Jan 27 09:56:45 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_TOP.W.1: Metal M_TOP width must be >= 2.0 um
+p 1 3
+888000 3020000
+892000 3020175
+888000 3024004
+p 2 3
+2040004 2004000
+2036000 2004000
+2036175 2000004
+p 3 3
+2152175 3573996
+2152000 3570000
+2156004 3570000
+M_TOP.SP.1
+0 0 2 Jan 27 09:56:45 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_TOP.SP.1: M_TOP to M_TOP spacing must be >= 2 um
+M_SD.W.1
+0 0 2 Jan 27 09:56:45 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_SD.W.1: Metal M_SD width must be >= 4.0 um
+M_SD.SP.1
+0 0 2 Jan 27 09:56:45 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_SD.SP.1: M_SD to M_SD spacing must be >= 2 um
+TOX_N.W.1
+0 0 2 Jan 27 09:56:45 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.W.1: TOX hole width must be >= 4.0 um
+TOX_N.SP.1
+0 0 2 Jan 27 09:56:45 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.SP.1: TOX hole to TOX hole spacing must be >= 4 um
+TOX_N.E.1
+0 0 2 Jan 27 09:56:45 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.E.1: TOX_N must be inside M_SD/M_TOP
+TOX_N.E.2
+0 0 2 Jan 27 09:56:45 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.E.2: Minimum M_SD/M_TOP to TOX_N enclosure >= 0.5 um

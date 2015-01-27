@@ -1,0 +1,976 @@
+Running: /afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/PVE121/tools.lnx86/pvs/bin/64bit/pvsvirt \
+  -mode lvs \
+  -global_log_file /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/pvsuilvs.log \
+  -control /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/pvslvsctl \
+  -df2_version 6.1.5.17 \
+  -run_dir /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns \
+  -no_rules_check \
+  -ai \
+  -schLibName AMPLIFIERS \
+  -schCellName lna_4 \
+  -schViewName schematic \
+  -simViewList auCdl\ schematic \
+  -simStopList auCdl \
+  -displayPinInfo \
+  -source_cdl /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.cdl \
+  -spice /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.spi \
+  -layLibName AMPLIFIERS \
+  -layCellName lna_4 \
+  -layViewName layout \
+  -igds /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds \
+  -layScale 0.0005 \
+  -layTechLib GPDK_1UM \
+  -convertPin geometry \
+  -layHierDepth 32 \
+  -layMaxVertices 2048 \
+  -rulesFile /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/.technology.rul
+
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.12s.
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.5-64b 06/11/2013 20:04 (sjfnl003) $
+          : sub-version  IC6.1.5-64b.500.17 
+Started at: 27-Jan-2015  10:12:39
+User Name : saul
+Host Name : avril.it.kth.se
+Directory : /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+libInit.il file is loaded
+WARNING (XSTRM-20): Output Stream file '/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds' already exists. It will be overwritten.
+INFO (XSTRM-288): The automatic layer mapping is done by StreamOut and the xStrmOut_layerMap.txt file is generated. This is because either the layer mapping is not provided or the XST_AUTO_LM value is used with the -layerMap option.
+
+Summary of Options :
+library                                 AMPLIFIERS
+strmFile                                /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds
+topCell                                 lna_4
+view                                    layout
+runDir                                  /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns
+logFile                                 /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/PIPO1.LOG
+techLib                                 GPDK_1UM
+hierDepth                               32
+maxVertices                             2048
+userSkillFile                           /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/strmout.il
+labelDepth                              32
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView AMPLIFIERS/power_rail/layout as STRUCTURE power_rail
+INFO (XSTRM-180): You have not used the objectMap option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the objectMap option to translate/preserve these objects using XStream. For details on the objectMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+INFO (XSTRM-223): 2. Translating cellView GPDK_1UM/ind_2n8/layout as STRUCTURE ind_2n8
+INFO (XSTRM-223): 3. Translating cellView CHIP_FINISH_LIB/RF_PAD_100/layout as STRUCTURE RF_PAD_100
+INFO (XSTRM-223): 4. Translating cellView CHIP_FINISH_LIB/PAD_100/layout as STRUCTURE PAD_100
+INFO (XSTRM-223): 5. Translating cellView AMPLIFIERS/lna_4/layout as STRUCTURE lna_4
+
+Summary of Objects Translated:
+	Scalar Instances:                       35
+	Array Instances:                        0
+	Polygons:                               7
+	Paths:                                  15
+	Rectangles:                             286
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	Pathsegs:                               0
+	Text:                                   11
+	Cells:                                  5
+
+Elapsed Time: 0.4s   User Time: 0.4s   CPU Time: 0.2s   Peak VM: 410KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.12s.
+*INFO* (icLic-25) License Virtuoso_Schematic_Editor_XL ("Schematics XL") was used to run Schematics L.
+
+Running simulation in directory: "/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/".
+
+libInit.il file is loaded
+Running Artist Hierarchical Netlisting ...
+Loading cdf.cxt 
+End netlisting Jan 27 10:12:41 2015
+
+Running simin
+*INFO* (icLic-25) License Virtuoso_Schematic_Editor_XL ("Schematics XL") was used to run Schematics L.
+
+Running runSim()...
+
+
+Running runsim with simulator: "auCdl"
+Begin simulation:    Jan 27 10:12:41 2015
+
+auCdl netlisting completed
+End simulation:      Jan 27 10:12:41 2015
+INFO (AUCDL-21): (Analog) CDL netlisting completed successfully.
+
+********************************************************************************
+pvs 12.1.1-p076 64 bit (Wed May  1 11:22:57 PDT 2013)
+Build Ref No.: 076 (05-01-2013)
+
+Copyright 2013 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+Build O/S:       Linux x86_64 2.6.18-194.el5
+Executed on:     avril.it.kth.se (Linux x86_64 2.6.18-348.4.1.el5)
+Starting Time:   Tue Jan 27 10:12:45 2015 (Tue Jan 27 09:12:45 2015 GMT)
+With parameters: -lvs -top_cell lna_4 -gds /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds -source_top_cell lna_4 -spice /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.spi -control /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/pvslvsctl -ui_data -gdb_data -ai /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/.technology.rul 
+********************************************************************************
+
+
+########################################################################
+Get host info ...
+########################################################################
+CPU info:
+    model name      :  AMD Opteron(tm) Processor 6172
+    cpu MHz         :  2100.059
+    cache size      :  512 KB
+    physical cores  :  24
+    logical cores   :  24
+
+Memory info:
+    80516M physical memory installed.
+
+    MemTotal:     82450572 kB
+    MemFree:        230820 kB
+    Buffers:       2779956 kB
+    Cached:       11752376 kB
+    SwapCached:         12 kB
+    Active:       67072984 kB
+    Inactive:      8827012 kB
+    HighTotal:           0 kB
+    HighFree:            0 kB
+    LowTotal:     82450572 kB
+    LowFree:        230820 kB
+    SwapTotal:    32764556 kB
+    SwapFree:     32763228 kB
+    Dirty:             796 kB
+    Writeback:           0 kB
+    AnonPages:    61368356 kB
+    Mapped:         297680 kB
+    Slab:          6093608 kB
+    PageTables:     141764 kB
+    NFS_Unstable:        0 kB
+    Bounce:              0 kB
+    CommitLimit:  73989840 kB
+    Committed_AS: 63366576 kB
+    VmallocTotal: 34359738367 kB
+    VmallocUsed:    296248 kB
+    VmallocChunk: 34359441643 kB
+    HugePages_Total:     0
+    HugePages_Free:      0
+    HugePages_Rsvd:      0
+    Hugepagesize:     2048 kB
+
+
+########################################################################
+Parsing Control File /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/pvslvsctl ...
+########################################################################
+TEXT_DEPTH -primary;
+VIRTUAL_CONNECT -colon no;
+VIRTUAL_CONNECT -semicolon yes;
+VIRTUAL_CONNECT -report no;
+LVS_IGNORE_PORTS no;
+LVS_COMPARE_PORT_NAMES no;
+LVS_RECOGNIZE_GATES -all;
+LVS_BREAK_AMBIG_MAX 32;
+LVS_ABORT -softchk no;
+LVS_FIND_SHORTS no;
+SCONNECT_UPPER_SHAPE_COUNT no;
+LVS_REPORT_FILE "lna_4.rep";
+LVS_REPORT_MAX 50 -mismatched_net_limit 100;
+LVS_REPORT_OPT -none;
+SCHEMATIC_PATH "/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.cdl";
+ABORT_ON_LAYOUT_ERROR yes;
+
+########################################################################
+Parsing Rule File /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/.technology.rul ...
+########################################################################
+TECHNOLOGY GPDK_1UM -ruleSet default -techLib /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pvtech.lib;
+[INFO]: TECHNOLOGY: Rules file /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/./pvlLVS.rul will be included after the remainder of the current rules are processed.
+[INFO]: TECHNOLOGY GPDK_1UM -techLib /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pvtech.lib: End of additions.
+INPUT_SCALE 2000;
+GRID 5;
+UNIT -length u;
+LAYOUT_PRESERVE_CASE -property yes;
+LAYER_DEF M_SD 1000;
+LAYER_MAP 2 -datatype 0 1000;
+LAYER_DEF M_TOP 1001;
+LAYER_MAP 5 -datatype 0 1001;
+LAYER_DEF GRAPH 1003;
+LAYER_MAP 3 -datatype 0 1003;
+LAYER_DEF TOX_N 1004;
+LAYER_MAP 4 -datatype 0 1004;
+LAYER_DEF M_SD_pin 1005;
+LAYER_MAP 2 -texttype 251 1005;
+TEXT_LAYER M_SD_pin;
+PORT -text_layer M_SD_pin;
+LAYER_DEF M_TOP_pin 1006;
+LAYER_MAP 5 -texttype 251 1006;
+TEXT_LAYER M_TOP_pin;
+PORT -text_layer M_TOP_pin;
+LAYER_DEF MIM_CAP 1007;
+LAYER_MAP 25 -datatype 0 1007;
+LAYER_DEF IND 1008;
+LAYER_MAP 26 -datatype 0 1008;
+LAYER_DEF IND_P1 1009;
+LAYER_MAP 27 -datatype 0 1009;
+LAYER_DEF IND_P2 1010;
+LAYER_MAP 28 -datatype 0 1010;
+LAYER_DEF IND_P3 1011;
+LAYER_MAP 29 -datatype 0 1011;
+LAYER_DEF IND_P4 1012;
+LAYER_MAP 30 -datatype 0 1012;
+LAYER_DEF RES_GRAPH 1013;
+LAYER_MAP 31 -datatype 0 1013;
+NOT M_TOP IND M_TOP_conn;
+NOT GRAPH RES_GRAPH GRAPH_aux;
+NOT M_TOP_conn M_SD M_TOP_gate;
+AND M_TOP_gate GRAPH_aux PGATE;
+NOT GRAPH_aux PGATE PSD;
+AND M_TOP_conn MIM_CAP M_CAP1;
+AND M_SD MIM_CAP M_CAP2;
+AND M_CAP1 M_CAP2 M_CAP;
+AND IND M_TOP IND_TOP;
+AND IND M_SD IND_SD;
+OR IND_TOP IND_SD IND_SEL;
+AND IND_SEL IND_P1 LAUX1;
+NOT LAUX1 IND_P2 LAUX2;
+NOT LAUX2 IND_P3 LAUX3;
+NOT LAUX3 IND_P4 IND_1;
+AND IND_SEL IND_P2 LAUX4;
+NOT LAUX4 IND_P1 LAUX5;
+NOT LAUX5 IND_P3 LAUX6;
+NOT LAUX6 IND_P4 IND_2;
+AND LAUX1 LAUX4 LAUX7;
+NOT LAUX7 IND_P3 LAUX8;
+NOT LAUX8 IND_P4 IND_3;
+AND IND_SEL IND_P3 LAUX9;
+NOT LAUX9 IND_P1 LAUX10;
+NOT LAUX10 IND_P2 LAUX11;
+NOT LAUX11 IND_P4 IND_4;
+
+RULE IND_SEL {
+    COPY IND_SEL;
+}
+
+RULE IND_1 {
+    COPY IND_1;
+}
+AND RES_GRAPH GRAPH RES_1;
+NOT RES_1 M_SD RES;
+AND RES_1 M_SD RES_TER;
+CONNECT M_SD M_TOP_conn -by TOX_N;
+CONNECT M_SD PSD -by M_SD;
+CONNECT M_TOP_gate M_TOP_conn -by M_TOP_conn;
+CONNECT M_CAP1 M_TOP_conn -by M_TOP_conn;
+CONNECT M_CAP2 M_SD -by M_SD;
+CONNECT IND_1 M_TOP_conn -by M_TOP_conn;
+CONNECT IND_2 M_TOP_conn -by M_TOP_conn;
+CONNECT IND_3 M_TOP_conn -by M_TOP_conn;
+CONNECT IND_4 M_TOP_conn -by M_TOP_conn;
+CONNECT RES_TER M_SD -by M_SD;
+ATTACH M_SD_pin M_SD;
+ATTACH M_TOP_pin M_TOP_conn;
+DEVICE M ( gfet ) PGATE M_TOP_gate ( G ) PSD ( D ) PSD ( S ) [ 
+ property W , L 
+ W = perimeter_co_out ( PGATE , PSD ) *0.5 
+ L = perimeter_inside ( PGATE , M_TOP_gate ) *0.5 
+ ];
+LVS_CHECK_PROPERTY M ( gfet ) W W -tolerance 3;
+LVS_CHECK_PROPERTY M ( gfet ) L L -tolerance 3;
+DEVICE C ( mim_cap ) M_CAP M_CAP1 ( PLUS ) M_CAP2 ( MINUS ) [ 
+ property W , L , c , Er , TOX 
+ W = 1e-05 
+ L = 1e-05 
+ Er = 9.1 
+ TOX = 2.5e-08 
+ c = area ( M_CAP ) *Er*8.854e-12 / TOX 
+ ];
+LVS_CHECK_PROPERTY C ( mim_cap ) c c -tolerance 3;
+DEVICE L ( ind_0n4 ) IND_SEL IND_1 ( PLUS ) IND_1 ( MINUS ) [ 
+ property L 
+ L = 4e-10 
+ ];
+DEVICE L ( ind_1n5 ) IND_SEL IND_2 ( PLUS ) IND_2 ( MINUS ) [ 
+ property L 
+ L = 1.5e-09 
+ ];
+DEVICE L ( ind_2n0 ) IND_SEL IND_3 ( PLUS ) IND_3 ( MINUS ) [ 
+ property L 
+ L = 2e-09 
+ ];
+DEVICE L ( ind_2n8 ) IND_SEL IND_4 ( PLUS ) IND_4 ( MINUS ) [ 
+ property L 
+ L = 2.8e-09 
+ ];
+DEVICE R ( graph_res ) RES RES_TER ( PLUS ) RES_TER ( MINUS ) [ 
+ property r , W , L , R_sheet 
+ R_sheet = 1000 
+ L = perimeter_outside ( RES , RES_TER ) / 2 
+ W = area ( RES ) / L 
+ r = R_sheet*L / W 
+ ];
+LVS_CHECK_PROPERTY R ( graph_res ) r r -tolerance 3;
+
+########################################################################
+checkout PVS license ...
+########################################################################
+This mode requires 1 primary license.
+Checking out SoftShare license Phys_Ver_Sys_LVS_XL 12.1 ... succeeded.
+
+
+
+########################################################################
+Optimizing Rules ...
+########################################################################
+[WARN] Neither hcell nor -automatch option is specified.
+Operation 'COPY' at line 115 in file pvlLVS.rul is not selected for executing, remove it.
+
+Time: cpu=0.02/0.02  real=0.19/0.19  Memory: 1.12/1.21/1.21
+
+
+########################################################################
+Loading Layout Data ...
+########################################################################
+Item with name 'Layout GDSII' and path '/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds' is already on the list - skip adding
+Parsing Layer Mapping File lna_4.lmap ...
+
+GDSII Input Summary
+
+Date: Tue Jan 27 10:12:45 2015
+GDSII file: /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds
+GDSII size: 24576
+GDSII version: 5.0
+GDSII library name: AMPLIFIERS
+Last Modified: 17:43:32 5/2/2014
+Last Accessed: 10:12:39 1/27/2015
+data base unit in user units    : 0.0005
+physical size of data base unit : 5e-10
+magnification: 1
+
+loading cell power_rail ...
+loading cell ind_2n8 ...
+loading cell RF_PAD_100 ...
+loading cell PAD_100 ...
+loading cell lna_4 ...
+
+Cell Summary:
+----------------------------------------------------------------------------
+    CELL            INSTANCE    GEOMETRY      LABELS        HREF        FREF
+----------------------------------------------------------------------------
+power_rail                 0          24           2          16          16
+ind_2n8                    0          19           0           3           3
+RF_PAD_100                 0           1           0           2           2
+PAD_100                    0           3           0          14          14
+lna_4                     35         261           9           1           1
+----------------------------------------------------------------------------
+TOTAL CELL = 5;  INSTANCE = 35;  GEOMETRY = 308;  LABEL = 11
+
+Layer Summary:
+----------------------------------------------------------------------------
+    LAYER           ID       HPN      HTC        FPN       FTC
+----------------------------------------------------------------------------
+M_SD              1000       126         0       265         0
+M_TOP             1001       124         0       280         0
+GRAPH             1003         8         0         8         0
+TOX_N             1004        26         0        43         0
+M_SD_pin          1005         0         1         0        16
+M_TOP_pin         1006         0        10         0        25
+MIM_CAP           1007        15         0       135         0
+IND               1008         1         0         3         0
+IND_P1            1009         0         0         0         0
+IND_P2            1010         0         0         0         0
+IND_P3            1011         2         0         6         0
+IND_P4            1012         0         0         0         0
+RES_GRAPH         1013         6         0         6         0
+----------------------------------------------------------------------------
+
+CHIP EXTENT: -280000 1068000 3626000 4504000
+
+
+Time: cpu=0.04/0.06  real=0.04/0.22  Memory: 3.61/3.72/3.72
+
+
+########################################################################
+Preparing Hierarchical Database ...
+########################################################################
+
+Constructing Hierarchical Database ...
+========================================================================
+
+    ind_2n8 is expanded.
+    RF_PAD_100 is expanded.
+    RF_PAD_100 is expanded.
+
+Time: cpu=0.00/0.06  real=0.00/0.22  Memory: 3.61/3.72/3.72
+
+
+  REORGANIZE HIERARCHIES (1)...
+
+
+Time: cpu=0.00/0.06  real=0.00/0.22  Memory: 3.61/3.72/3.72
+
+  REORGANIZE HIERARCHIES (2)...
+
+
+Time: cpu=0.00/0.06  real=0.00/0.22  Memory: 3.61/3.72/3.72
+
+
+Cell Summary:
+----------------------------------------------------------------------------
+    CELL            INSTANCE    GEOMETRY      LABELS        HREF        FREF
+----------------------------------------------------------------------------
+power_rail                 0          24           2          16          16
+PAD_100                    0           3           0          14          14
+lna_4                     30         320           9           1           1
+----------------------------------------------------------------------------
+TOTAL CELL = 3;  INSTANCE = 30;  GEOMETRY = 347;  LABEL = 11
+
+Layer Summary:
+----------------------------------------------------------------------------
+    LAYER           ID       HPN      HTC        FPN       FTC
+----------------------------------------------------------------------------
+M_SD              1000       132         0       265         0
+M_TOP             1001       147         0       280         0
+GRAPH             1003         8         0         8         0
+TOX_N             1004        30         0        43         0
+M_SD_pin          1005         0         1         0        16
+M_TOP_pin         1006         0        10         0        25
+MIM_CAP           1007        15         0       135         0
+IND               1008         3         0         3         0
+IND_P1            1009         0         0         0         0
+IND_P2            1010         0         0         0         0
+IND_P3            1011         6         0         6         0
+IND_P4            1012         0         0         0         0
+RES_GRAPH         1013         6         0         6         0
+----------------------------------------------------------------------------
+
+Layer Summary(Texts For Connectivity):
+----------------------------------------------------------------------------
+    LAYER           ID       TEXTS
+----------------------------------------------------------------------------
+M_SD_pin          1005         1
+M_TOP_pin         1006        10
+----------------------------------------------------------------------------
+
+Layer Summary(Texts For With Text):
+----------------------------------------------------------------------------
+    LAYER           ID       TEXTS
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+Layer Summary(Texts For Expand Text):
+----------------------------------------------------------------------------
+    LAYER           ID       TEXTS
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+Time: cpu=0.00/0.06  real=0.00/0.22  Memory: 3.61/3.72/3.72
+
+
+Compacting Hierarchy Library ...
+========================================================================
+
+Time: cpu=0.00/0.06  real=0.00/0.22  Memory: 3.09/3.20/3.72
+
+
+Analyzing Cell Overlapings ...
+========================================================================
+
+Time: cpu=0.00/0.06  real=0.01/0.23  Memory: 3.09/3.20/3.72
+
+
+Merge Layers ...
+========================================================================
+    M_SD, HPN = 41, FPN = 69
+    M_TOP, HPN = 37, FPN = 65
+    GRAPH, HPN = 8, FPN = 8
+    TOX_N, HPN = 30, FPN = 43
+    MIM_CAP, HPN = 15, FPN = 135
+    IND, HPN = 3, FPN = 3
+    IND_P3, HPN = 6, FPN = 6
+    RES_GRAPH, HPN = 6, FPN = 6
+
+Time: cpu=0.00/0.06  real=0.00/0.23  Memory: 3.09/3.20/3.98
+
+
+Texts For Connectivity ...
+========================================================================
+VD2 (1665.000, 1792.000) 1006 lna_4
+VD1 (917.000, 2204.000) 1006 lna_4
+OUT (1679.000, 1416.000) 1006 lna_4
+IN (-7.000, 1350.000) 1006 lna_4
+GD (861.000, 582.000) 1006 lna_4
+BIAS4 (1671.000, 1021.000) 1006 lna_4
+BIAS3 (1676.000, 870.000) 1006 lna_4
+BIAS2 (342.000, 2200.000) 1006 lna_4
+BIAS1 (-16.000, 964.000) 1006 lna_4
+GD (39.000, 229.000) 1005 power_rail
+VD (442.000, 229.000) 1006 power_rail
+
+Texts For With Text ...
+========================================================================
+
+Texts For Expand Text ...
+========================================================================
+
+Texts For Device Text Model Layer ...
+========================================================================
+
+Texts For Device Text Property Layer ...
+========================================================================
+
+Time: cpu=0.00/0.06  real=0.00/0.23  Memory: 3.09/3.20/3.98
+
+
+########################################################################
+Execute Operations ...
+########################################################################
+
+
+operation group: 1/31
+    M_TOP_conn = NOT M_TOP IND
+========================================================================
+    generate layer M_TOP_conn, HPN = 38, FPN = 66
+
+Time: cpu=0.01/0.07  real=0.01/0.23  Memory: 3.09/3.20/3.98
+
+
+
+operation group: 2/31
+    GRAPH_aux = NOT GRAPH RES_GRAPH
+========================================================================
+    generate layer GRAPH_aux, HPN = 2, FPN = 2
+
+Time: cpu=0.00/0.07  real=0.00/0.23  Memory: 3.09/3.20/3.98
+
+
+
+operation group: 3/31
+    M_TOP_gate = NOT M_TOP_conn M_SD
+========================================================================
+    generate layer M_TOP_gate, HPN = 45, FPN = 45
+
+Time: cpu=0.00/0.07  real=0.01/0.24  Memory: 3.35/3.46/3.98
+
+
+
+operation group: 4/31
+    PGATE = AND M_TOP_gate GRAPH_aux
+========================================================================
+    generate layer PGATE, HPN = 4, FPN = 4
+
+Time: cpu=0.00/0.07  real=0.00/0.24  Memory: 3.35/3.46/3.98
+
+
+
+operation group: 5/31
+    PSD = NOT GRAPH_aux PGATE
+========================================================================
+    generate layer PSD, HPN = 6, FPN = 6
+
+Time: cpu=0.00/0.07  real=0.00/0.24  Memory: 3.35/3.46/3.98
+
+    delete layer GRAPH_aux
+
+
+operation group: 6/31
+    M_CAP1 = AND M_TOP_conn MIM_CAP
+========================================================================
+    generate layer M_CAP1, HPN = 15, FPN = 135
+
+Time: cpu=0.00/0.07  real=0.00/0.24  Memory: 3.35/3.46/3.98
+
+
+
+operation group: 7/31
+    M_CAP2 = AND M_SD MIM_CAP
+========================================================================
+    generate layer M_CAP2, HPN = 15, FPN = 135
+
+Time: cpu=0.00/0.07  real=0.00/0.24  Memory: 3.35/3.46/3.98
+
+    delete layer MIM_CAP
+
+
+operation group: 8/31
+    IND_TOP = AND IND M_TOP
+========================================================================
+    generate layer IND_TOP, HPN = 6, FPN = 6
+
+Time: cpu=0.01/0.08  real=0.01/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer M_TOP
+
+
+operation group: 9/31
+    IND_SD = AND IND M_SD
+========================================================================
+    generate layer IND_SD, HPN = 3, FPN = 3
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer IND
+
+
+operation group: 10/31
+    IND_SEL = OR IND_TOP IND_SD
+========================================================================
+    generate layer IND_SEL, HPN = 3, FPN = 3
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer IND_TOP
+    delete layer IND_SD
+
+
+operation group: 11/31
+    LAUX1 = AND IND_SEL IND_P1
+========================================================================
+    generate layer LAUX1, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+
+
+operation group: 12/31
+    LAUX2 = NOT LAUX1 IND_P2
+========================================================================
+    generate layer LAUX2, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+
+
+operation group: 13/31
+    LAUX3 = NOT LAUX2 IND_P3
+========================================================================
+    generate layer LAUX3, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX2
+
+
+operation group: 14/31
+    IND_1 = NOT LAUX3 IND_P4
+========================================================================
+    generate layer IND_1, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX3
+
+
+operation group: 15/31
+    LAUX4 = AND IND_SEL IND_P2
+========================================================================
+    generate layer LAUX4, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+
+
+operation group: 16/31
+    LAUX5 = NOT LAUX4 IND_P1
+========================================================================
+    generate layer LAUX5, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+
+
+operation group: 17/31
+    LAUX6 = NOT LAUX5 IND_P3
+========================================================================
+    generate layer LAUX6, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX5
+
+
+operation group: 18/31
+    IND_2 = NOT LAUX6 IND_P4
+========================================================================
+    generate layer IND_2, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX6
+
+
+operation group: 19/31
+    LAUX7 = AND LAUX1 LAUX4
+========================================================================
+    generate layer LAUX7, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX1
+    delete layer LAUX4
+
+
+operation group: 20/31
+    LAUX8 = NOT LAUX7 IND_P3
+========================================================================
+    generate layer LAUX8, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX7
+
+
+operation group: 21/31
+    IND_3 = NOT LAUX8 IND_P4
+========================================================================
+    generate layer IND_3, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX8
+
+
+operation group: 22/31
+    LAUX9 = AND IND_SEL IND_P3
+========================================================================
+    generate layer LAUX9, HPN = 6, FPN = 6
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer IND_P3
+
+
+operation group: 23/31
+    LAUX10 = NOT LAUX9 IND_P1
+========================================================================
+    generate layer LAUX10, HPN = 6, FPN = 6
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX9
+    delete layer IND_P1
+
+
+operation group: 24/31
+    LAUX11 = NOT LAUX10 IND_P2
+========================================================================
+    generate layer LAUX11, HPN = 6, FPN = 6
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX10
+    delete layer IND_P2
+
+
+operation group: 25/31
+    IND_4 = NOT LAUX11 IND_P4
+========================================================================
+    generate layer IND_4, HPN = 6, FPN = 6
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer LAUX11
+    delete layer IND_P4
+
+
+operation group: 26/31
+    RES_1 = AND RES_GRAPH GRAPH
+========================================================================
+    generate layer RES_1, HPN = 6, FPN = 6
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+    delete layer RES_GRAPH
+    delete layer GRAPH
+
+
+operation group: 27/31
+    RES_TER = AND RES_1 M_SD
+========================================================================
+    generate layer RES_TER, HPN = 12, FPN = 12
+
+Time: cpu=0.00/0.08  real=0.00/0.25  Memory: 3.35/3.46/4.24
+
+
+
+operation group: 28/31
+    CONNECT M_SD M_TOP_conn -by TOX_N
+    CONNECT M_SD PSD -by M_SD
+    CONNECT M_TOP_gate M_TOP_conn -by M_TOP_conn
+    CONNECT M_CAP1 M_TOP_conn -by M_TOP_conn
+    CONNECT M_CAP2 M_SD -by M_SD
+    CONNECT IND_1 M_TOP_conn -by M_TOP_conn
+    CONNECT IND_2 M_TOP_conn -by M_TOP_conn
+    CONNECT IND_3 M_TOP_conn -by M_TOP_conn
+    CONNECT IND_4 M_TOP_conn -by M_TOP_conn
+    CONNECT RES_TER M_SD -by M_SD
+========================================================================
+
+Time: cpu=0.00/0.08  real=0.01/0.26  Memory: 3.38/3.46/4.50
+
+    delete layer TOX_N
+    delete layer M_TOP_conn
+
+
+operation group: 29/31
+    M_CAP = AND M_CAP1 M_CAP2
+========================================================================
+    generate layer M_CAP, HPN = 15, FPN = 135
+
+Time: cpu=0.01/0.09  real=0.01/0.26  Memory: 3.38/3.46/4.50
+
+
+
+operation group: 30/31
+    RES = NOT RES_1 M_SD
+========================================================================
+    generate layer RES, HPN = 6, FPN = 6
+
+Time: cpu=0.00/0.09  real=0.01/0.27  Memory: 3.38/3.46/4.50
+
+    delete layer RES_1
+    delete layer M_SD
+
+
+operation group: 31/31
+    DEVICE M( gfet) PGATE M_TOP_gate( G) PSD( S) PSD( D) [
+		W = (perim_co_out(PGATE, PSD) * 0.5)
+		L = (perim_in(PGATE, M_TOP_gate) * 0.5)
+	]
+
+    DEVICE C( mim_cap) M_CAP M_CAP1( PLUS) M_CAP2( MINUS) [
+		W = 1e-05
+		L = 1e-05
+		Er = 9.1
+		TOX = 2.5e-08
+		c = (((area(M_CAP) * Er) * 8.854e-12) / TOX)
+	]
+
+    DEVICE L( ind_0n4) IND_SEL IND_1( PLUS) IND_1( MINUS) [
+		L = 4e-10
+	]
+
+    DEVICE L( ind_1n5) IND_SEL IND_2( PLUS) IND_2( MINUS) [
+		L = 1.5e-09
+	]
+
+    DEVICE L( ind_2n0) IND_SEL IND_3( PLUS) IND_3( MINUS) [
+		L = 2e-09
+	]
+
+    DEVICE L( ind_2n8) IND_SEL IND_4( PLUS) IND_4( MINUS) [
+		L = 2.8e-09
+	]
+
+    DEVICE R( graph_res) RES RES_TER( PLUS) RES_TER( MINUS) [
+		R_sheet = 1000
+		L = (perim_out(RES, RES_TER) / 2)
+		W = (area(RES) / L)
+		r = ((R_sheet * L) / W)
+	]
+
+========================================================================
+
+
+DEVICE RECOGNITION ... 
+Write DEVICES ... 
+
+
+Time: cpu=0.02/0.11  real=0.03/0.30  Memory: 3.38/3.46/4.50
+
+    delete layer PGATE
+    delete layer M_TOP_gate
+    delete layer PSD
+    delete layer M_CAP
+    delete layer M_CAP1
+    delete layer M_CAP2
+    delete layer IND_SEL
+    delete layer IND_4
+    delete layer RES
+    delete layer RES_TER
+
+
+########################################################################
+Outputting Results ...
+########################################################################
+
+   ONE LAYER BOOLEAN: Cumulative Time CPU =        0(s) REAL =        0(s)
+   TWO LAYER BOOLEAN: Cumulative Time CPU =        0(s) REAL =        0(s)
+ POLYGON TOPOLOGICAL: Cumulative Time CPU =        0(s) REAL =        0(s)
+ POLYGON MEASUREMENT: Cumulative Time CPU =        0(s) REAL =        0(s)
+                SIZE: Cumulative Time CPU =        0(s) REAL =        0(s)
+    EDGE TOPOLOGICAL: Cumulative Time CPU =        0(s) REAL =        0(s)
+    EDGE MEASUREMENT: Cumulative Time CPU =        0(s) REAL =        0(s)
+               STAMP: Cumulative Time CPU =        0(s) REAL =        0(s)
+       ONE LAYER DRC: Cumulative Time CPU =        0(s) REAL =        0(s)
+       TWO LAYER DRC: Cumulative Time CPU =        0(s) REAL =        0(s)
+            NET AREA: Cumulative Time CPU =        0(s) REAL =        0(s)
+             DENSITY: Cumulative Time CPU =        0(s) REAL =        0(s)
+       MISCELLANEOUS: Cumulative Time CPU =        0(s) REAL =        0(s)
+             CONNECT: Cumulative Time CPU =        0(s) REAL =        0(s)
+              DEVICE: Cumulative Time CPU =        0(s) REAL =        0(s)
+                 ERC: Cumulative Time CPU =        0(s) REAL =        0(s)
+       PATTERN_MATCH: Cumulative Time CPU =        0(s) REAL =        0(s)
+
+
+Total CPU Time                    : 0(s)
+Total Real Time                   : 0(s)
+Peak Memory Used                  : 5(M)
+Total Original Geometry           : 308(746)
+Total ERC RuleChecks              : 0
+Total ERC Results                 : 0 (0)
+Summary can be found in file result.sum
+
+
+Creating extracted connectivity database ...
+Legend for cell operations:
+   C - Cells
+   P - Pins
+   N - Net
+   D - Device
+   I - Insts
+   S - Shapes
+   X - Delete cell memory
+Opening layer file 'lna_4_7756.db/__layer'...
+Loading layer map file './lna_4.gds.map'...
+Loading text map file './lna_4.ports'...
+Opening output file './/.lna_4.ecdb'...
+Writing db header information...(0s)
+Transfering cdl structures to ecdb structures...
+Cell(0): L convert...edb data not found...(0s)
+Cell(1): power_rail convert...Link SIDN...Save IPLNX...Done...(0s)
+Cell(2): PAD_100 convert...Link SIDN...Save IPLNX...Done...(0s)
+Cell(3): lna_4 convert...Link SIDN...Save IPLNX...Done...(0s)
+Cells creation time: (0s)
+Erasing cdl subckts...
+Write netlist items...(0s)
+Saving name table to db...Write calculated header information to the top of file...
+ERROR: Failure reading / writing: basic_ios::clear
+    1) Disk is full
+
+Command "edbToEcdb -edb      lna_4_7756.db -ecdb     ./ -topcell  lna_4 -netlist  ./lna_4.net -layermap ./lna_4.gds.map -textmap  ./lna_4.ports -saveFloatingNets .lna_4.info.softchk" returned exit code 101
+[ERROR] Creation of the extracted connectivity db failed.
+[WARN] Deleting ecdb files due to ecdbToEcdb failure (25856)
+Fatal error encountered
+
+Execution aborted.  Exiting with status 1.
+
+
+Netlist Extraction Finished Abnormally. Tue Jan 27 10:12:46 2015
+
+
+Checking in all SoftShare licenses.
+
+
+
+pvsvirt: pvs failed

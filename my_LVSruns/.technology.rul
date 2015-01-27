@@ -1,0 +1,1 @@
+technology "GPDK_1UM" -ruleSet "default" -techLib "/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pvtech.lib";

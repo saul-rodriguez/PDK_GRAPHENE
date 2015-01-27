@@ -1,0 +1,183 @@
+\# Program start time UTC 2013.08.20 13:50:54.970
+\# Local time Tuesday 20 August 2013, 3:50 pm
+\o Program:		@(#)$CDS: virtuoso version 6.1.5-64b 03/12/2013 00:04 (sjfdl066) $
+\o Hierarchy:		/afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/IC615_500/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.5-64b.500.16.2  (64-bit addresses)
+\# Host name (type):	atlantis.it.kth.se (x86_64)
+\# Operating system:	Linux 2.6.18-348.4.1.el5 #1 SMP Fri Mar 22 05:41:51 EDT 2013
+\# X display name (WxH):	atlantis.it.kth.se:80.0 (1024x868)
+\# Available geometry:			TL(0:0) BR(1023:867)
+\# X server:			RealVNC Ltd (VNC nograph server)
+\# Depth of Visual (Root):	16 (16)
+\# Number of Planes Used:	16
+\# X version:		11.0 (vendor release 3370)
+\# X resource pool:	base 0x800000, mask 0x3fffff (4194303), shift 0
+\# 			current id 0x31, current max 0x3ffffa (4194298)
+\# Memory report:	maximum data size 18446744073709551615 (0xffffffffffffffff) bytes
+\# Memory report:	maximum process size 18446744073709551615 (0xffffffffffffffff) bytes
+\# Initial sbrk value:	488792064 (0x1d226000) bytes
+\# Available memory:	63914432 (0x3cf41c0) kilobytes
+\# System memory:	98765656 (0x5e30b58) kilobytes
+\# Maximum memory size:	100696080384 (0x1771f44000) bytes
+\# Max mem available:	65497219072 (0xf3ff04000) bytes
+\# Initial memory used:	48840704 (0x2e94000) bytes
+\# Qt version:		4.5.3
+\# Window Manager:	other
+\# User Name:		saul
+\o Working Directory:	atlantis.it.kth.se:/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE
+\# Process Id:		27632
+\o 
+\o COPYRIGHT © 1992-2013  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           © 1992-2013  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\# Available memory:	63900472 (0x3cf0b38) kilobytes UTC 2013.08.20 13:50:55.538
+\# Memory report: Maximum memory size now 65490776064 (0xf3f8df000) bytes, UTC 2013.08.20 13:50:55.538
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading pvsskill.cxt.
+\o PVS: IPVS cannot be started in nographic mode
+\o Loading LVS.cxt 
+\o Loading layerProc.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading dcm.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading adexl.cxt 
+\o Loading oasis.cxt 
+\o Loading asimenv.cxt 
+\o Loading analog.cxt 
+\o Loading par.cxt 
+\o Loading socket.cxt 
+\o Loading alvs.cxt 
+\o *Info*    Exporting services from client ... 
+\o 
+\o *Info*    Client has finished starting ... 
+\o 
+\p > 
+\o 
+\o 
+\o *Info*    Configuring the session ...
+\o 
+\o 	Library      = AMP_CONFIG
+\o 	Cell         = gfet_bias
+\o 	View         = schematic
+\o 	Simulator    = spectre
+\o 	State Path   = $AXL_SETUPDB_DIR/test_states
+\o 	State Name   = AMP_CONFIG:gfet_bias:1_none_Interactive.49
+\o 	Results DB   = /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/AMP_CONFIG/gfet_bias/adexl/results/data/Interactive.49.rdb
+\o 	Results Dir  = /afs/ict.kth.se/home/s/a/saul/simulation/AMP_CONFIG/gfet_bias/adexl/results/data/Interactive.49/1/AMP_CONFIG:gfet_bias:1
+\o 	Results Loc  = /afs/ict.kth.se/home/s/a/saul/simulation/AMP_CONFIG/gfet_bias/adexl/results/data
+\o 	Project Dir  = /afs/it.kth.se/home/s/saul/simulation
+\o 	Setup DB loc = /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/AMP_CONFIG/gfet_bias/adexl
+\o 	File Encoding = 0
+\o 
+\o 
+\o Loading simui.cxt 
+\o Loading awv.cxt 
+\o Loading viva.cxt 
+\o *Info*    Spectre controlMode is set "batch".
+\o 
+\o Loading spectrei.cxt 
+\o Loading relXpert.cxt 
+\o libInit.il file is loaded
+\# Memory report: now 154034176 (0x92e6000) bytes, UTC 2013.08.20 13:51:05.362
+\o Loading devCheck.cxt 
+\o 
+\o 
+\o 
+\o 
+\o 
+\o *Info*    Run start for Point ID (2 1) on testbench [
+\o           AMP_CONFIG:gfet_bias:1 ].
+\o 
+\o Resetting statistical vars
+\o 
+\o *Info*    Setting parameter values ...
+\o 
+\o Setting var L = "2u"
+\o Setting var Nf = "39e15"
+\o Setting var RC = "0"
+\o Setting var VDS = "1"
+\o Setting var VGS = "-1"
+\o Setting var W = "20u"
+\o Setting temp(T) = 27
+\o 
+\o *Info*    Netlist Directory =
+\o           /afs/ict.kth.se/home/s/a/saul/simulation/AMP_CONFIG/gfet_bias/adexl/results/data/Interactive.49/1/AMP_CONFIG:gfet_bias:1/netlist
+\o 
+\o 
+\o *Info*    Data Directory    =
+\o           /afs/ict.kth.se/home/s/a/saul/simulation/AMP_CONFIG/gfet_bias/adexl/results/data/Interactive.49/1/AMP_CONFIG:gfet_bias:1
+\o 
+\o 
+\o *Info*    Creating Netlist for Point ID (2 1)
+\o 
+\o generate netlist...
+\o Loading spectreinl.cxt 
+\o Loading seCore.cxt 
+\o Begin Incremental Netlisting Aug 20 15:51:06 2013
+\o WARNING (OSSHNL-145): Incremental netlisting is not possible since the netlist in this run directory
+\o was generated using a previous IHNL version which is incompatible with the
+\o current IHNL version. Therefore re-netlisting the entire design using the
+\o current IHNL version.
+\o 
+\o End netlisting Aug 20 15:51:07 2013
+\o 
+\o Netlisting Statistics:
+\o 	Number of components:    5
+\o 
+\o 	Elapsed time:          1.0s (5.00/s)
+\o Errors: 0	Warnings: 0
+\o       ...successful.
+\o compose simulator input file...
+\o       ...successful.
+\o 
+\o *Info*    Running simulation on testbench [ AMP_CONFIG:gfet_bias:1 ]
+\o           for Point ID (2 1).
+\o 
+\o Delete psf data in /afs/ict.kth.se/home/s/a/saul/simulation/AMP_CONFIG/gfet_bias/adexl/results/data/Interactive.49/1/AMP_CONFIG:gfet_bias:1/psf.
+\o compose simulator input file...
+\o       ...successful.
+\o start simulator if needed...
+\o       ...successful.
+\o simulate...
+\o To view the simulator output, right-click on the test name, result 
+\o name, or any value in the "Results" tab of the Outputs section and 
+\o choose "Output Log" menu option.
+\o Loading paraplot.cxt 
+\o INFO (ADE-3071): Simulation completed successfully.
+\o reading simulation data...
+\o       ...successful.
+\o Loading hspiceD.cxt 
+\o Loading msgHandler.cxt 
+\o Loading UltraSim.cxt 
+\o Loading AMSOSS.cxt 
+\o Loading AMS.cxt 
+\o *Info*    Client has finished evaluating ... 
+\o 
+\o 
+\o *Info*    Run complete for Point ID (2 1) on testbench [
+\o           AMP_CONFIG:gfet_bias:1 ].
+\o 
+\o 
+\o 
+\o 
+\o 
+\o Simulation design variables differ from those on the cellView,
+\o they have been saved in the file "/tmp/saved-design-variables".
+\o To save future changes, copy variables to cellView before exiting.
+\# Memory report: on exit 166125568 (0x9e6e000) bytes, UTC 2013.08.20 13:56:29.843
+\# Memory report: peak usage 166133760 (0x9e70000) bytes

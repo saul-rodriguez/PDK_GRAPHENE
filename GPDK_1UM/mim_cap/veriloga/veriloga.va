@@ -1,0 +1,30 @@
+// VerilogA for GPDK_1UM, mim_cap, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module mim_cap(MINUS, PLUS);
+inout MINUS;
+electrical MINUS;
+inout PLUS;
+electrical PLUS;
+
+`define Eo 8.854e-12         // Vacuum permittivity
+
+parameter real l = 10u ;
+parameter real w = 10u ;
+parameter real c = 1p ;
+parameter real Er = 9.1;
+parameter real TOX = 25e-9;
+
+//parameter real model = mim_cap ;
+real cap;
+
+analog begin
+
+	cap = `Eo*Er/TOX*w*l;
+    I(PLUS,MINUS) <+ cap*ddt(V(PLUS,MINUS));
+end
+
+
+endmodule

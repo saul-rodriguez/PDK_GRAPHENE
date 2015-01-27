@@ -1,0 +1,4 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary series_cap
+OUT 3 OUT 6600 44800 M_TOP_conn
+IN 1 IN 74000 44800 M_TOP_conn

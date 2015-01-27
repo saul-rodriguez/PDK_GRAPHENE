@@ -1,0 +1,59 @@
+TOP_amplifiers 2000
+M_TOP.W.1
+3 3 2 Jan 27 09:51:15 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_TOP.W.1: Metal M_TOP width must be >= 2.0 um
+p 1 3
+1276000 1917400
+1280000 1917575
+1276000 1921404
+p 2 3
+2428004 901400
+2424000 901400
+2424175 897404
+p 3 3
+2540175 2471396
+2540000 2467400
+2544004 2467400
+M_TOP.SP.1
+3 3 2 Jan 27 09:51:15 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_TOP.SP.1: M_TOP to M_TOP spacing must be >= 2 um
+p 1 5
+240000 3266059
+244000 3267716
+241716 3270000
+244000 3272284
+240000 3273941
+p 2 3
+2702200 128284
+2706200 132284
+2702200 133941
+p 3 3
+2702200 26059
+2706200 27716
+2702200 31716
+M_SD.W.1
+0 0 2 Jan 27 09:51:15 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_SD.W.1: Metal M_SD width must be >= 4.0 um
+M_SD.SP.1
+0 0 2 Jan 27 09:51:15 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+M_SD.SP.1: M_SD to M_SD spacing must be >= 2 um
+TOX_N.W.1
+0 0 2 Jan 27 09:51:15 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.W.1: TOX hole width must be >= 4.0 um
+TOX_N.SP.1
+0 0 2 Jan 27 09:51:15 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.SP.1: TOX hole to TOX hole spacing must be >= 4 um
+TOX_N.E.1
+0 0 2 Jan 27 09:51:15 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.E.1: TOX_N must be inside M_SD/M_TOP
+TOX_N.E.2
+0 0 2 Jan 27 09:51:15 2015
+Rule File Pathname: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+TOX_N.E.2: Minimum M_SD/M_TOP to TOX_N enclosure >= 0.5 um

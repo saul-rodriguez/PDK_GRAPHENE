@@ -1,0 +1,16 @@
+case	"preserve"
+convertDot	"node"
+convertPin	"geometry"
+hierDepth	32
+labelCase	"preserve"
+labelDepth	32
+library	"AMPLIFIERS"
+logFile	"/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/PIPO1.LOG"
+maxVertices	2048
+pinAttNum	0
+runDir	"/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns"
+strmFile	"/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds"
+strmVersion	5
+techLib	"GPDK_1UM"
+topCell	"lna_4"
+view	"layout"

@@ -1,0 +1,25 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                          *
+*                                                       *
+* Cell Name  : ind_1                                    *
+* Netlisted  : Fri Aug 23 13:24:09 2013                 *
+* PVS Version: 12.1.1-p076 Wed May  1 11:22:57 PDT 2013 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 L(ind_0n4) IND_SEL IND_1(PLUS) IND_1(MINUS)
+*.DEVTMPLT 1 L(ind_1n5) IND_SEL IND_2(PLUS) IND_2(MINUS)
+*.DEVTMPLT 2 L(ind_2n0) IND_SEL IND_3(PLUS) IND_3(MINUS)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: L                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt L PLUS MINUS
+.ends L
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: ind_1                                       *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt ind_1
+** N=5 EP=0 FDC=1
+X0 5 4 L L=4e-10 $[ind_0n4] $X=-80200 $Y=0 $dt=0
+.ends ind_1

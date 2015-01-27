@@ -1,0 +1,26 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                          *
+*                                                       *
+* Cell Name  : graph_res                                *
+* Netlisted  : Fri Aug 23 15:15:14 2013                 *
+* PVS Version: 12.1.1-p076 Wed May  1 11:22:57 PDT 2013 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 L(ind_0n4) IND_SEL IND_1(PLUS) IND_1(MINUS)
+*.DEVTMPLT 1 L(ind_1n5) IND_SEL IND_2(PLUS) IND_2(MINUS)
+*.DEVTMPLT 2 L(ind_2n0) IND_SEL IND_3(PLUS) IND_3(MINUS)
+*.DEVTMPLT 3 L(ind_2n8) IND_SEL IND_4(PLUS) IND_4(MINUS)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: L                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt L PLUS MINUS
+.ends L
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: graph_res                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt graph_res
+** N=2 EP=0 FDC=1
+R0 2 1 571.429 L=4e-06 W=7e-06 R_sheet=1000 $[graph_res] $X=10000 $Y=-26000
+.ends graph_res

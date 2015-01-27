@@ -1,0 +1,30 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : lna_3.rep
+ERC Summary File         : result.sum
+LVS Comparison Report    : lna_3.rep.cls
+Layout Name              : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_3.gds ("lna_3")
+User Name                : saul
+Creation Time            : Fri May  2 17:55:50 2014
+Current directory        : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns
+PVS Version              : 12.1.1-p076 Wed May  1 11:22:57 PDT 2013
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+
+Clean cell list (added by extraction report parser )
+ for cell "L"
+ for cell "PAD_100"
+ for cell "lna_3"
+ for cell "power_rail"

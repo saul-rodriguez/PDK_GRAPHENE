@@ -1,0 +1,7 @@
+cell: "graph_res"
+selected net: "1"
+rejected nets: "2" 
+contact layer: ""
+lower layer: "PSD"
+upper layer:  "M_SD"
+command:  "sconnect M_SD PSD"

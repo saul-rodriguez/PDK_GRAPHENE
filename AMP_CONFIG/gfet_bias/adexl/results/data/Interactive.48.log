@@ -1,0 +1,19 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Tue Aug 20 14:04:38 2013 
+Best design point: 2
+Design specs: 
+	AMP_CONFIG:gfet_bias:1	corner	Nominal - 
+Design parameters: 
+	Nf		39P
+	VDS		1
+	VGS		-750m
+	L		2u
+	W		20u
+	RC		20
+
+Interactive.48
+Number of points completed: 6
+Number of simulation errors: 0
+Interactive.48 completed. 
+Current time: Tue Aug 20 14:05:14 2013 

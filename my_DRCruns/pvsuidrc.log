@@ -1,0 +1,568 @@
+Running: /afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/PVE121/tools.lnx86/pvs/bin/64bit/pvsvirt \
+  -time2error \
+  -mode drc \
+  -global_log_file /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/pvsuidrc.log \
+  -control /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/pvsdrcctl \
+  -ai \
+  -layLibName AMPLIFIERS \
+  -layCellName lna_4 \
+  -layViewName layout \
+  -igds /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.gds \
+  -layScale 0.0005 \
+  -layTechLib GPDK_1UM \
+  -convertPin geometry \
+  -layHierDepth 32 \
+  -layMaxVertices 2048 \
+  -rulesFile /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul \
+  -df2_version 6.1.5.17 \
+  -sign IPVS_1422349001_31251 \
+  -run_dir /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns \
+  -no_rules_check
+
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.12s.
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.5-64b 06/11/2013 20:04 (sjfnl003) $
+          : sub-version  IC6.1.5-64b.500.17 
+Started at: 27-Jan-2015  09:56:44
+User Name : saul
+Host Name : avril.it.kth.se
+Directory : /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+libInit.il file is loaded
+WARNING (XSTRM-20): Output Stream file '/afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.gds' already exists. It will be overwritten.
+INFO (XSTRM-288): The automatic layer mapping is done by StreamOut and the xStrmOut_layerMap.txt file is generated. This is because either the layer mapping is not provided or the XST_AUTO_LM value is used with the -layerMap option.
+
+Summary of Options :
+library                                 AMPLIFIERS
+strmFile                                /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.gds
+topCell                                 lna_4
+view                                    layout
+runDir                                  /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns
+logFile                                 /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/PIPO1.LOG
+techLib                                 GPDK_1UM
+hierDepth                               32
+maxVertices                             2048
+userSkillFile                           /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/strmout.il
+labelDepth                              32
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView AMPLIFIERS/power_rail/layout as STRUCTURE power_rail
+INFO (XSTRM-180): You have not used the objectMap option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the objectMap option to translate/preserve these objects using XStream. For details on the objectMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+INFO (XSTRM-223): 2. Translating cellView GPDK_1UM/ind_2n8/layout as STRUCTURE ind_2n8
+INFO (XSTRM-223): 3. Translating cellView CHIP_FINISH_LIB/RF_PAD_100/layout as STRUCTURE RF_PAD_100
+INFO (XSTRM-223): 4. Translating cellView CHIP_FINISH_LIB/PAD_100/layout as STRUCTURE PAD_100
+INFO (XSTRM-223): 5. Translating cellView AMPLIFIERS/lna_4/layout as STRUCTURE lna_4
+
+Summary of Objects Translated:
+	Scalar Instances:                       35
+	Array Instances:                        0
+	Polygons:                               7
+	Paths:                                  15
+	Rectangles:                             286
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	Pathsegs:                               0
+	Text:                                   11
+	Cells:                                  5
+
+Elapsed Time: 0.5s   User Time: 0.4s   CPU Time: 0.2s   Peak VM: 410KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.
+
+
+********************************************************************************
+pvs 12.1.1-p076 64 bit (Wed May  1 11:22:57 PDT 2013)
+Build Ref No.: 076 (05-01-2013)
+
+Copyright 2013 Cadence Design Systems, Inc.
+All rights reserved worldwide.
+
+Build O/S:       Linux x86_64 2.6.18-194.el5
+Executed on:     avril.it.kth.se (Linux x86_64 2.6.18-348.4.1.el5)
+Starting Time:   Tue Jan 27 09:56:45 2015 (Tue Jan 27 08:56:45 2015 GMT)
+With parameters: -drc -time2error -top_cell lna_4 -ui_data -control /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/pvsdrcctl -gds /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.gds -ai /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul 
+********************************************************************************
+
+
+########################################################################
+Get host info ...
+########################################################################
+CPU info:
+    model name      :  AMD Opteron(tm) Processor 6172
+    cpu MHz         :  2100.059
+    cache size      :  512 KB
+    physical cores  :  24
+    logical cores   :  24
+
+Memory info:
+    80516M physical memory installed.
+
+    MemTotal:     82450572 kB
+    MemFree:        151196 kB
+    Buffers:       2892616 kB
+    Cached:       11707912 kB
+    SwapCached:         12 kB
+    Active:       67103188 kB
+    Inactive:      8864260 kB
+    HighTotal:           0 kB
+    HighFree:            0 kB
+    LowTotal:     82450572 kB
+    LowFree:        151196 kB
+    SwapTotal:    32764556 kB
+    SwapFree:     32763228 kB
+    Dirty:             176 kB
+    Writeback:           0 kB
+    AnonPages:    61369340 kB
+    Mapped:         298764 kB
+    Slab:          6099716 kB
+    PageTables:     141084 kB
+    NFS_Unstable:        0 kB
+    Bounce:              0 kB
+    CommitLimit:  73989840 kB
+    Committed_AS: 63360924 kB
+    VmallocTotal: 34359738367 kB
+    VmallocUsed:    296248 kB
+    VmallocChunk: 34359441643 kB
+    HugePages_Total:     0
+    HugePages_Free:      0
+    HugePages_Rsvd:      0
+    Hugepagesize:     2048 kB
+
+
+########################################################################
+Parsing Control File /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/pvsdrcctl ...
+########################################################################
+TEXT_DEPTH -primary;
+VIRTUAL_CONNECT -colon no;
+VIRTUAL_CONNECT -semicolon yes;
+VIRTUAL_CONNECT -report no;
+REPORT_SUMMARY -drc "lna_4.sum" -replace;
+MAX_RESULTS -drc 1000;
+MAX_VERTEX -drc 4096;
+RESULTS_DB -drc "/afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.drc_errors.ascii" -ascii;
+ABORT_ON_LAYOUT_ERROR yes;
+
+########################################################################
+Parsing Rule File /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul ...
+########################################################################
+TECHNOLOGY GPDK_1UM -ruleSet default -techLib /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/GPDK_1UM/pvtech.lib;
+[INFO]: TECHNOLOGY: Rules file /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/./pvlDRC.rul will be included after the remainder of the current rules are processed.
+[INFO]: TECHNOLOGY GPDK_1UM -techLib /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/GPDK_1UM/pvtech.lib: End of additions.
+LAYOUT_PATH "CELLNAME.gds" gdsii;
+[WARN] Cmd-line override: LAYOUT_PATH "/afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.gds";
+LAYOUT_PRIMARY "CELLNAME";
+[WARN] Cmd-line override: LAYOUT_PRIMARY "lna_4";
+RESULTS_DB -drc "CELLNAME.db" -ascii;
+[WARN]: RESULTS_DB -ascii at line 10 in file pvlDRC.rul is skipped. It is set in control file.
+INPUT_SCALE 2000;
+GRID 5;
+UNIT -length u;
+TEXT_DEPTH -primary;
+[WARN]: TEXT_DEPTH at line 15 in file pvlDRC.rul is skipped. It is set in control file.
+FLAG -nonsimple yes;
+LAYER_DEF M_SD 1000;
+LAYER_MAP 2 -datatype 0 1000;
+LAYER_DEF M_TOP 1001;
+LAYER_MAP 5 -datatype 0 1001;
+LAYER_DEF GRAPH 1003;
+LAYER_MAP 3 -datatype 0 1003;
+LAYER_DEF TOX_N 1004;
+LAYER_MAP 4 -datatype 0 1004;
+LAYER_DEF M_SD_pin 1005;
+LAYER_MAP 2 -texttype 251 1005;
+TEXT_LAYER M_SD_pin;
+PORT -text_layer M_SD_pin;
+LAYER_DEF M_TOP_pin 1006;
+LAYER_MAP 5 -texttype 251 1006;
+TEXT_LAYER M_TOP_pin;
+PORT -text_layer M_TOP_pin;
+LAYER_DEF MIM_CAP 1007;
+LAYER_MAP 25 -datatype 0 1007;
+LAYER_DEF IND 1008;
+LAYER_MAP 26 -datatype 0 1008;
+LAYER_DEF IND_P1 1009;
+LAYER_MAP 27 -datatype 0 1009;
+LAYER_DEF IND_P2 1010;
+LAYER_MAP 28 -datatype 0 1010;
+LAYER_DEF IND_P3 1011;
+LAYER_MAP 29 -datatype 0 1011;
+LAYER_DEF IND_P4 1012;
+LAYER_MAP 30 -datatype 0 1012;
+AND M_SD M_TOP m_SD_TOP;
+
+RULE M_TOP.W.1 {
+    CAPTION M_TOP.W.1: Metal M_TOP width must be >= 2.0 um;
+    INTE M_TOP -lt 2 -output region -singular -abut lt 90;
+}
+
+RULE M_TOP.SP.1 {
+    CAPTION M_TOP.SP.1: M_TOP to M_TOP spacing must be >= 2 um;
+    EXTE M_TOP M_TOP -lt 2 -output region -singular -abut lt 90;
+}
+
+RULE M_SD.W.1 {
+    CAPTION M_SD.W.1: Metal M_SD width must be >= 4.0 um;
+    INTE M_SD -lt 4 -output region -singular -abut lt 90;
+}
+
+RULE M_SD.SP.1 {
+    CAPTION M_SD.SP.1: M_SD to M_SD spacing must be >= 2 um;
+    EXTE M_SD M_SD -lt 2 -output region -singular -abut lt 90;
+}
+
+RULE TOX_N.W.1 {
+    CAPTION TOX_N.W.1: TOX hole width must be >= 4.0 um;
+    INTE TOX_N -lt 4 -output region -singular -abut lt 90;
+}
+
+RULE TOX_N.SP.1 {
+    CAPTION TOX_N.SP.1: TOX hole to TOX hole spacing must be >= 4 um;
+    EXTE TOX_N TOX_N -lt 4 -output region -singular -abut lt 90;
+}
+
+RULE TOX_N.E.1 {
+    CAPTION TOX_N.E.1: TOX_N must be inside M_SD/M_TOP;
+    NOT TOX_N M_SD_TOP TOX_Naux;
+    COPY TOX_Naux;
+}
+
+RULE TOX_N.E.2 {
+    CAPTION TOX_N.E.2: Minimum M_SD/M_TOP to TOX_N enclosure >= 0.5 um;
+    ENC M_SD_TOP TOX_N -lt 0.5 -output region -singular -abut lt 90;
+}
+
+########################################################################
+checkout PVS license ...
+########################################################################
+This mode requires 1 primary license.
+Checking out SoftShare license Phys_Ver_Sys_DRC_XL 12.1 ... succeeded.
+
+
+
+########################################################################
+Optimizing Rules ...
+########################################################################
+
+Time: cpu=0.03/0.03  real=0.18/0.18  Memory: 1.12/1.18/1.18
+
+checking write lock of file /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.drc_errors.ascii.running, waiting
+
+########################################################################
+Loading Layout Data ...
+########################################################################
+Item with name 'Layout GDSII' and path '/afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.gds' is already on the list - skip adding
+Parsing Layer Mapping File lna_4.lmap ...
+
+GDSII Input Summary
+
+Date: Tue Jan 27 09:56:45 2015
+GDSII file: /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.gds
+GDSII size: 24576
+GDSII version: 5.0
+GDSII library name: AMPLIFIERS
+Last Modified: 17:43:32 5/2/2014
+Last Accessed: 9:56:44 1/27/2015
+data base unit in user units    : 0.0005
+physical size of data base unit : 5e-10
+magnification: 1
+
+loading cell power_rail ...
+loading cell ind_2n8 ...
+loading cell RF_PAD_100 ...
+loading cell PAD_100 ...
+loading cell lna_4 ...
+
+Cell Summary:
+----------------------------------------------------------------------------
+    CELL            INSTANCE    GEOMETRY      LABELS        HREF        FREF
+----------------------------------------------------------------------------
+power_rail                 0          16           0          16          16
+ind_2n8                    0          16           0           3           3
+RF_PAD_100                 0           1           0           2           2
+PAD_100                    0           3           0          14          14
+lna_4                     35         240           0           1           1
+----------------------------------------------------------------------------
+TOTAL CELL = 5;  INSTANCE = 35;  GEOMETRY = 276;  LABEL = 0
+
+Layer Summary:
+----------------------------------------------------------------------------
+    LAYER                 ID       HPN      HTC        FPN       FTC
+----------------------------------------------------------------------------
+M_SD                    1000       126         0       265         0
+M_TOP                   1001       124         0       280         0
+TOX_N                   1004        26         0        43         0
+----------------------------------------------------------------------------
+
+CHIP EXTENT: -280000 1068000 3626000 4504000
+
+
+Time: cpu=0.01/0.04  real=0.02/0.20  Memory: 3.56/3.71/3.71
+
+
+########################################################################
+Preparing Hierarchical Database ...
+########################################################################
+
+Constructing Hierarchical Database ...
+========================================================================
+
+    RF_PAD_100 is expanded.
+    RF_PAD_100 is expanded.
+
+Time: cpu=0.00/0.04  real=0.00/0.20  Memory: 3.56/3.71/3.71
+
+
+  REORGANIZE HIERARCHIES (1)...
+
+
+Time: cpu=0.00/0.04  real=0.00/0.20  Memory: 3.56/3.71/3.71
+
+    PAD_100 is expanded.
+  REORGANIZE HIERARCHIES (2)...
+
+
+Time: cpu=0.00/0.04  real=0.00/0.20  Memory: 3.56/3.71/3.71
+
+
+Cell Summary:
+----------------------------------------------------------------------------
+    CELL            INSTANCE    GEOMETRY      LABELS        HREF        FREF
+----------------------------------------------------------------------------
+power_rail                 0          16           0          16          16
+ind_2n8                    0          16           0           3           3
+lna_4                     19         284           0           1           1
+----------------------------------------------------------------------------
+TOTAL CELL = 3;  INSTANCE = 19;  GEOMETRY = 316;  LABEL = 0
+
+Layer Summary:
+----------------------------------------------------------------------------
+    LAYER                 ID       HPN      HTC        FPN       FTC
+----------------------------------------------------------------------------
+M_SD                    1000       139         0       265         0
+M_TOP                   1001       138         0       280         0
+TOX_N                   1004        39         0        43         0
+----------------------------------------------------------------------------
+
+Layer Summary(Texts For Connectivity):
+----------------------------------------------------------------------------
+    LAYER                 ID       TEXTS
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+Layer Summary(Texts For With Text):
+----------------------------------------------------------------------------
+    LAYER                 ID       TEXTS
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+Layer Summary(Texts For Expand Text):
+----------------------------------------------------------------------------
+    LAYER                 ID       TEXTS
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+Time: cpu=0.00/0.04  real=0.00/0.20  Memory: 3.56/3.71/3.71
+
+
+Compacting Hierarchy Library ...
+========================================================================
+
+Time: cpu=0.00/0.04  real=0.00/0.20  Memory: 3.03/3.19/3.71
+
+
+Analyzing Cell Overlapings ...
+========================================================================
+
+Time: cpu=0.00/0.04  real=0.00/0.20  Memory: 3.03/3.19/3.71
+
+
+Merge Layers ...
+========================================================================
+    M_SD, HPN = 44, FPN = 61
+    M_TOP, HPN = 27, FPN = 27
+    TOX_N, HPN = 39, FPN = 43
+
+Time: cpu=0.01/0.05  real=0.01/0.21  Memory: 3.03/3.19/4.23
+
+
+Texts For Connectivity ...
+========================================================================
+
+Texts For With Text ...
+========================================================================
+
+Texts For Expand Text ...
+========================================================================
+
+Time: cpu=0.00/0.05  real=0.00/0.21  Memory: 3.03/3.19/4.23
+
+
+########################################################################
+Execute Operations ...
+########################################################################
+
+
+operation group: 1/10
+    M_TOP.W.1:L65537 = INTE M_TOP -lt 2 -output region -single_point -abut lt 90
+========================================================================
+    generate layer M_TOP.W.1:L65537, HPN = 3, FPN = 3
+
+Time: cpu=0.00/0.05  real=0.01/0.22  Memory: 3.03/3.19/4.23
+
+
+    Rule Check M_TOP.W.1 finished, 3 error(s) reported.
+
+
+operation group: 2/10
+    M_TOP.SP.1:L65538 = EXTE M_TOP -lt 2 -output region -single_point -abut lt 90
+========================================================================
+    generate layer M_TOP.SP.1:L65538, HPN = 0, FPN = 0
+
+Time: cpu=0.01/0.06  real=0.01/0.23  Memory: 3.04/3.19/4.23
+
+
+    Rule Check M_TOP.SP.1 finished, 0 error(s) reported.
+
+
+operation group: 3/10
+    M_SD.W.1:L65539 = INTE M_SD -lt 4 -output region -single_point -abut lt 90
+========================================================================
+    generate layer M_SD.W.1:L65539, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.06  real=0.00/0.23  Memory: 3.04/3.19/4.23
+
+
+    Rule Check M_SD.W.1 finished, 0 error(s) reported.
+
+
+operation group: 4/10
+    M_SD.SP.1:L65540 = EXTE M_SD -lt 2 -output region -single_point -abut lt 90
+========================================================================
+    generate layer M_SD.SP.1:L65540, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.06  real=0.00/0.23  Memory: 3.04/3.19/4.23
+
+
+    Rule Check M_SD.SP.1 finished, 0 error(s) reported.
+
+
+operation group: 5/10
+    TOX_N.W.1:L65541 = INTE TOX_N -lt 4 -output region -single_point -abut lt 90
+========================================================================
+    generate layer TOX_N.W.1:L65541, HPN = 0, FPN = 0
+
+Time: cpu=0.01/0.07  real=0.01/0.24  Memory: 3.05/3.19/4.23
+
+
+    Rule Check TOX_N.W.1 finished, 0 error(s) reported.
+
+
+operation group: 6/10
+    TOX_N.SP.1:L65542 = EXTE TOX_N -lt 4 -output region -single_point -abut lt 90
+========================================================================
+    generate layer TOX_N.SP.1:L65542, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.07  real=0.00/0.24  Memory: 3.05/3.19/4.23
+
+
+    Rule Check TOX_N.SP.1 finished, 0 error(s) reported.
+
+
+operation group: 7/10
+    m_SD_TOP = AND M_SD M_TOP
+========================================================================
+    generate layer m_SD_TOP, HPN = 68, FPN = 68
+
+Time: cpu=0.00/0.07  real=0.00/0.24  Memory: 3.05/3.19/4.23
+
+    delete layer M_SD
+    delete layer M_TOP
+
+
+operation group: 8/10
+    TOX_N.E.1:TOX_Naux = NOT TOX_N m_SD_TOP
+========================================================================
+    generate layer TOX_N.E.1:TOX_Naux, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.07  real=0.01/0.25  Memory: 3.05/3.19/4.23
+
+
+
+operation group: 9/10
+    TOX_N.E.1:L65544 = COPY TOX_N.E.1:TOX_Naux
+========================================================================
+    generate layer TOX_N.E.1:L65544, HPN = 0, FPN = 0
+
+Time: cpu=0.00/0.07  real=0.00/0.25  Memory: 3.05/3.19/4.23
+
+    delete layer TOX_N.E.1:TOX_Naux
+
+    Rule Check TOX_N.E.1 finished, 0 error(s) reported.
+
+
+operation group: 10/10
+    TOX_N.E.2:L65545 = ENC m_SD_TOP TOX_N -lt 0.5 -output region -single_point -abut lt 90
+========================================================================
+    generate layer TOX_N.E.2:L65545, HPN = 0, FPN = 0
+
+Time: cpu=0.01/0.08  real=0.01/0.25  Memory: 3.06/3.19/4.23
+
+    delete layer m_SD_TOP
+    delete layer TOX_N
+
+    Rule Check TOX_N.E.2 finished, 0 error(s) reported.
+
+
+########################################################################
+Outputting Results ...
+########################################################################
+
+   ONE LAYER BOOLEAN: Cumulative Time CPU =        0(s) REAL =        0(s)
+   TWO LAYER BOOLEAN: Cumulative Time CPU =        0(s) REAL =        0(s)
+ POLYGON TOPOLOGICAL: Cumulative Time CPU =        0(s) REAL =        0(s)
+ POLYGON MEASUREMENT: Cumulative Time CPU =        0(s) REAL =        0(s)
+                SIZE: Cumulative Time CPU =        0(s) REAL =        0(s)
+    EDGE TOPOLOGICAL: Cumulative Time CPU =        0(s) REAL =        0(s)
+    EDGE MEASUREMENT: Cumulative Time CPU =        0(s) REAL =        0(s)
+               STAMP: Cumulative Time CPU =        0(s) REAL =        0(s)
+       ONE LAYER DRC: Cumulative Time CPU =        0(s) REAL =        0(s)
+       TWO LAYER DRC: Cumulative Time CPU =        0(s) REAL =        0(s)
+            NET AREA: Cumulative Time CPU =        0(s) REAL =        0(s)
+             DENSITY: Cumulative Time CPU =        0(s) REAL =        0(s)
+       MISCELLANEOUS: Cumulative Time CPU =        0(s) REAL =        0(s)
+             CONNECT: Cumulative Time CPU =        0(s) REAL =        0(s)
+              DEVICE: Cumulative Time CPU =        0(s) REAL =        0(s)
+                 ERC: Cumulative Time CPU =        0(s) REAL =        0(s)
+       PATTERN_MATCH: Cumulative Time CPU =        0(s) REAL =        0(s)
+
+
+Total CPU Time                    : 0(s)
+Total Real Time                   : 0(s)
+Peak Memory Used                  : 4(M)
+Total Original Geometry           : 276(588)
+Total DRC RuleChecks              : 8
+Total DRC Results                 : 3 (3)
+Summary can be found in file lna_4.sum
+ASCII report database is /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.drc_errors.ascii
+Checking in all SoftShare licenses.
+
+
+Design Rule Check Finished Normally. Tue Jan 27 09:56:45 2015
+
+
+

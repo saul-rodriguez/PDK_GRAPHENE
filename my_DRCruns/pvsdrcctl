@@ -1,0 +1,9 @@
+text_depth -primary;
+virtual_connect -colon no;
+virtual_connect -semicolon yes;
+virtual_connect -report no;
+report_summary -drc "lna_4.sum" -replace;
+max_results -drc 1000;
+max_vertex -drc 4096;
+results_db -drc "/afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.drc_errors.ascii" -ascii;
+abort_on_layout_error yes;

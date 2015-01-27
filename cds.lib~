@@ -1,0 +1,14 @@
+### cds.lib
+### *************************************************************************
+### General Purpose Reference Libraries
+### *************************************************************************
+#SOFTINCLUDE $AMSHOME/tools/inca/files/cds.lib
+DEFINE cdsDefTechLib $CDSHOME/tools/dfII/etc/cdsDefTechLib
+DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE functional $CDSHOME/tools/dfII/etc/cdslib/artist/functional
+DEFINE basic $CDSHOME/tools/dfII/etc/cdslib/basic
+DEFINE US_8ths $CDSHOME/tools/dfII/etc/cdslib/sheets/US_8ths
+DEFINE sample $CDSHOME/tools/dfII/samples/cdslib/sample
+DEFINE ahdlLib $CDSHOME/tools/dfII/samples/artist/ahdlLib
+DEFINE rfLib $CDSHOME/tools/dfII/samples/artist/rfLib
+DEFINE pllLib $CDSHOME/tools/dfII/samples/artist/pllLib

@@ -1,0 +1,9 @@
+CADENCE IHNL01070
+$model
+AMPLIFIERS/lna_4/schematic lna_4
+AMPLIFIERS/power_rail/schematic power_rail
+$endmodel
+$net
+$endnet
+$param
+$endparam

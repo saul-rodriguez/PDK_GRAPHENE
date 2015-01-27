@@ -1,0 +1,13 @@
+
+/afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/PVE121/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+EDB Library dir : lna_4_7756.db
+ECDB dir        : ./
+Top Cell        : lna_4
+CDL netlist     : ./lna_4.net
+Layer map file  : ./lna_4.gds.map
+Text map file   : ./lna_4.ports
+Float net file : .lna_4.info.softchk
+debug           : 0
+Source Library  : lna_4_7756

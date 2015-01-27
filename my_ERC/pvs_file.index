@@ -1,0 +1,59 @@
+"Cadence Directory" internal none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/.cadence/
+"Current Directory" internal none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE
+"GUI Flow" internal none virtuoso6
+"GUI Preset" internal none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/.preset.autosave
+"Job Signature" internal none IPVS_1377704463_26244
+"PVS Job Mode" internal none erc
+"Run Directory" internal none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC
+"Technology Mapping File" internal none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pvtech.lib
+"Technology Name" internal none "GPDK_1UM"
+"Technology Rule File" internal none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/.technology.rul
+"Technology RuleSet" internal none "default"
+"PVS Version" internal none 12.1.1-p076
+"Binary Name" internal none ipvs
+"PVS Build Date" internal none "Wed May  1 11:22:02 PDT 2013"
+"PVS Job Time" internal none 1377704465
+"Control File" input text /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/pvsercctl
+"DFII version" internal none 6.1.5.16
+"Do not check rules files before run" internal none ENABLED
+"Extracted Spice File" output text /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.spi
+"Input Layout" input none OA: AMPLIFIERS basic_resistor layout
+"Intermediate GDSII File" output none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.gds
+"Intermediate GDSII File creation Errors" output none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/PIPO1.LOG
+"Intermediate OASIS File creation Errors" output none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/PIPO1.LOG
+"Layout Cell Name" internal none basic_resistor
+"Layout ConvertPin" internal text geometry
+"Layout GDSII" input none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.gds
+"Layout HierDepth" internal none 32
+"Layout Library Name" internal none AMPLIFIERS
+"Layout MaxVertices" internal none 2048
+"Layout Scale" internal none 0.0005
+"Layout TechLib" internal none GPDK_1UM
+"Layout Top Cell" internal none basic_resistor
+"Layout View Name" internal none layout
+"Output Layout Cellmap I" internal text /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/lay_cellMap.txt
+"PIPO Log I" log text  /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/PIPO1.LOG
+"PIPO Output I" internal text  /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/PIPO1.OUT
+"PIPO Setup File I" internal text  /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/pipo1.setup
+"PVS Job Log" log text /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/pvsuierc.log
+"PVS Job Mode" internal none erc
+"Rule File" input text /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/.technology.rul
+"Run Directory" internal none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC
+"PVS Version" internal none 12.1.1-p076
+"Binary Name" internal none pvsvirt
+"PVS Build Date" internal none "Wed May  1 11:27:00 PDT 2013"
+"PVS Job Time" internal none 1377704467
+"ERC Summary" output text /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.sum
+"Extracted Spice File" output text /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.spi
+"Extraction Report" output erc /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.lvsrpt
+"Extraction Result" internal none CLEAN
+"LVS Report Options" internal none -none
+"Layout GDSII" input none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.gds
+"PVS Job Mode" internal none erc
+"Rule File" input text /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/.technology.rul
+"Run Directory" internal none /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/
+"UI Data" internal none ENABLED
+"PVS Version" internal none 12.1.1-p076
+"Binary Name" internal none pvs
+"PVS Build Date" internal none "Wed May  1 11:22:57 PDT 2013"
+"PVS Job Time" internal none 1377704468

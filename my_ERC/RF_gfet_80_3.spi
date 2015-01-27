@@ -1,0 +1,27 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                          *
+*                                                       *
+* Cell Name  : RF_gfet_80_3                             *
+* Netlisted  : Fri Aug 16 17:51:44 2013                 *
+* PVS Version: 12.1.1-p076 Wed May  1 11:22:57 PDT 2013 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 L(ind_0n4) IND_SEL IND_1(PLUS) IND_1(MINUS)
+*.DEVTMPLT 1 L(ind_1n5) IND_SEL IND_2(PLUS) IND_2(MINUS)
+*.DEVTMPLT 2 L(ind_2n0) IND_SEL IND_3(PLUS) IND_3(MINUS)
+*.DEVTMPLT 3 L(ind_2n8) IND_SEL IND_4(PLUS) IND_4(MINUS)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: L                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt L PLUS MINUS
+.ends L
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: RF_gfet_80_3                                *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt RF_gfet_80_3
+** N=4 EP=0 FDC=2
+M0 2 1 3 gfet W=4e-05 L=3e-06 $X=10000 $Y=0
+M1 4 1 2 gfet W=4e-05 L=3e-06 $X=10000 $Y=34000
+.ends RF_gfet_80_3

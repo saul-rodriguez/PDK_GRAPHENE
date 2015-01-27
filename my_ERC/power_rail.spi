@@ -1,0 +1,26 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                          *
+*                                                       *
+* Cell Name  : power_rail                               *
+* Netlisted  : Mon Aug 26 16:49:47 2013                 *
+* PVS Version: 12.1.1-p076 Wed May  1 11:22:57 PDT 2013 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 L(ind_0n4) IND_SEL IND_1(PLUS) IND_1(MINUS)
+*.DEVTMPLT 1 L(ind_1n5) IND_SEL IND_2(PLUS) IND_2(MINUS)
+*.DEVTMPLT 2 L(ind_2n0) IND_SEL IND_3(PLUS) IND_3(MINUS)
+*.DEVTMPLT 3 L(ind_2n8) IND_SEL IND_4(PLUS) IND_4(MINUS)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: L                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt L PLUS MINUS
+.ends L
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: power_rail                                  *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt power_rail
+** N=2 EP=0 FDC=1
+C0 1 2 5.15657e-12 L=1e-05 Er=9.1 TOX=2.5e-08 W=1e-05 $[mim_cap] $X=90000 $Y=420000
+.ends power_rail

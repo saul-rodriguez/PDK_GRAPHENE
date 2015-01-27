@@ -1,0 +1,16 @@
+text_depth -primary;
+virtual_connect -colon no;
+virtual_connect -semicolon yes;
+virtual_connect -report no;
+lvs_ignore_ports no;
+lvs_compare_port_names no;
+lvs_recognize_gates -all;
+lvs_break_ambig_max 32;
+lvs_abort -softchk no;
+lvs_find_shorts no;
+sconnect_upper_shape_count no;
+lvs_report_file "lna_4.rep";
+lvs_report_max 50 -mismatched_net_limit 100;
+lvs_report_opt -none;
+schematic_path "/afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.cdl";
+abort_on_layout_error yes;

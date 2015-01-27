@@ -1,0 +1,63 @@
+********************************************************************************
+*** PVS HDRC SUMMARY
+***
+Execute on Date/Time    : Fri Aug 23 11:30:09 2013
+PVS HDRC VERSION        : 12.1.1-p076 Wed May  1 11:22:57 PDT 2013
+Rule Deck Path          : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+Rule Deck Title         :
+Layout System           : GDSII
+Layout Path             : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/graph_res.gds
+Current Directory       : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns
+User Name:              : saul
+Maximum Results         : 1000
+Maximum Result Vertices : 4096
+Layout Depth            : ALL
+Text Depth              : 0
+Summary File            : graph_res.sum
+Geometry Flagging       : ACUTE = NO  ANGLED = NO  SKEW = NO  OFFGRID = NO
+                          NONSIMPLE POLYGON = YES  NONSIMPLE PATH = NO
+Keep Empty Checks       : YES
+Excluded Cells          : 
+Layout Primary Cell     : graph_res
+ASCII DRC Error Report  : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/graph_res.drc_errors.ascii
+DRC Results Database    :
+--------------------------------------------------------------------------------
+--- RUNNING TIME WARNINGS
+---
+--------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER M_SD ....................... Total Original Geometry:        2 (       2)
+LAYER M_TOP ...................... Total Original Geometry:        0 (       0)
+LAYER GRAPH ...................... Total Original Geometry:        1 (       1)
+LAYER TOX_N ...................... Total Original Geometry:        0 (       0)
+LAYER IND ........................ Total Original Geometry:        0 (       0)
+LAYER GRAPH_RES .................. Total Original Geometry:        1 (       1)
+--------------------------------------------------------------------------------
+--- WARNINGS FROM FLAG STATEMENT
+---
+--------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK M_SD.SP.1 .................. Total Result      0 (       0)
+RULECHECK M_SD.W.1 ................... Total Result      0 (       0)
+RULECHECK M_TOP.SP.1 ................. Total Result      0 (       0)
+RULECHECK M_TOP.W.1 .................. Total Result      0 (       0)
+RULECHECK M_TOP_gate ................. Total Result      0 (       0)
+RULECHECK PGATE ...................... Total Result      0 (       0)
+RULECHECK PSD ........................ Total Result      1 (       1)
+RULECHECK RES ........................ Total Result      1 (       1)
+RULECHECK RES_T ...................... Total Result      2 (       2)
+RULECHECK TOX_N.E.1 .................. Total Result      0 (       0)
+RULECHECK TOX_N.E.2 .................. Total Result      0 (       0)
+RULECHECK TOX_N.SP.1 ................. Total Result      0 (       0)
+RULECHECK TOX_N.W.1 .................. Total Result      0 (       0)
+--------------------------------------------------------------------------------
+--- SUMMARY
+---
+Total CPU Time                    : 0(s)
+Total Real Time                   : 0(s)
+Peak Memory Used                  : 4(M)
+Total Original Geometry           : 4 (4)
+Total DRC RuleChecks              : 13
+Total DRC Results                 : 4 (4)

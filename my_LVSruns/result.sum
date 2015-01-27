@@ -1,0 +1,59 @@
+********************************************************************************
+*** PVS HERC SUMMARY
+***
+Execute on Date/Time    : Tue Jan 27 10:12:45 2015
+PVS HERC VERSION        : 12.1.1-p076 Wed May  1 11:22:57 PDT 2013
+Rule Deck Path          : /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/.technology.rul
+Rule Deck Title         :
+Layout System           : GDSII
+Layout Path             : /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds
+Current Directory       : /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns
+User Name:              : saul
+Maximum Results         : 1000
+Maximum Result Vertices : 4096
+Layout Depth            : ALL
+Text Depth              : 0
+Summary File            : result.sum
+Geometry Flagging       : ACUTE = NO  ANGLED = NO  SKEW = NO  OFFGRID = NO
+                          NONSIMPLE POLYGON = NO  NONSIMPLE PATH = NO
+Keep Empty Checks       : YES
+Excluded Cells          : 
+Layout Primary Cell     : lna_4
+ASCII ERC Error Report  :
+ERC Results Database    :
+--------------------------------------------------------------------------------
+--- RUNNING TIME WARNINGS
+---
+--------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER M_SD ....................... Total Original Geometry:      126 (     265)
+LAYER M_TOP ...................... Total Original Geometry:      124 (     280)
+LAYER GRAPH ...................... Total Original Geometry:        8 (       8)
+LAYER TOX_N ...................... Total Original Geometry:       26 (      43)
+LAYER M_SD_pin ................... Total Original Geometry:        0 (       0)
+LAYER M_TOP_pin .................. Total Original Geometry:        0 (       0)
+LAYER MIM_CAP .................... Total Original Geometry:       15 (     135)
+LAYER IND ........................ Total Original Geometry:        1 (       3)
+LAYER IND_P1 ..................... Total Original Geometry:        0 (       0)
+LAYER IND_P2 ..................... Total Original Geometry:        0 (       0)
+LAYER IND_P3 ..................... Total Original Geometry:        2 (       6)
+LAYER IND_P4 ..................... Total Original Geometry:        0 (       0)
+LAYER RES_GRAPH .................. Total Original Geometry:        6 (       6)
+--------------------------------------------------------------------------------
+--- WARNINGS FROM FLAG STATEMENT
+---
+--------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK IND_1 ...................... Not Executed!
+RULECHECK IND_SEL .................... Not Executed!
+--------------------------------------------------------------------------------
+--- SUMMARY
+---
+Total CPU Time                    : 0(s)
+Total Real Time                   : 0(s)
+Peak Memory Used                  : 5(M)
+Total Original Geometry           : 308 (746)
+Total ERC RuleChecks              : 0
+Total ERC Results                 : 0 (0)

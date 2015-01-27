@@ -1,0 +1,62 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.5 - CAT32 05/06/2013 23:37 (cat91amd) $
+\o Sub version:		sub-version  s014 
+\o Arguments:		-cdslib /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/cds.lib -mpssession virtuoso31105 -mpshost avril.it.kth.se 
+\o Working Directory:	avril.it.kth.se:/afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		4.5.3
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "cdsDefTechLib"
+\a nrResizeWindow(cdsLibEditor list(1910 14 500 400))
+\a nrResizeWindow(cdsLibEditor list(764 83 500 400))
+\a nrResizeWindow(cdsLibEditor list(764 83 804 669))
+\a nrListItemAction(cdsLibEditor->mainTable 9 1)
+\o Active cell: 9 1 "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM"
+\o QUESTION (CLE-200): The directory "/afs/ict.kth.se/home/s/a/saul/FROMICT/projects/PDK_GRAPHENE/GPDK_1UM" \ndoesn't exist. If other tools use this file, \nan error will occur unless you either create \nthe directory you have specified or change the \npath to an existing directory. \n\nDo you want to create a new library? 
+\a nrSetWindowVisibility(needCreateDialog "show")
+\a nrSetCurrentWindow(needCreateDialog)
+\a nrResizeWindow(needCreateDialog list(835 246 663 207))
+\a needCreateDialog->yesButton->value = t
+\a newLibraryDialog->filePathComboBox->value = "/afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE"
+\a newLibraryDialog->libraryName->value = "GPDK_1UM"
+\a newLibraryDialog->useMappedName->value = nil
+\a nrSetWindowVisibility(newLibraryDialog "show")
+\a nrListItemAction(cdsLibEditor->mainTable 10 0)
+\o Active cell: 10 0 "TEST_LIB"
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrSetCurrentWindow(newLibraryDialog)
+\a nrResizeWindow(newLibraryDialog list(879 144 574 513))
+\a newLibraryDialog->cancelButton->value = t
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 9 1)
+\o Active cell: 9 1 "/afs/ict.kth.se/home/s/a/saul/FROMICT/projects/PDK_GRAPHENE/GPDK_1UM"
+\a nrListItemAction(cdsLibEditor->mainTable 10 0)
+\o Active cell: 10 0 "TEST_LIB"
+\a nrListItemAction(cdsLibEditor->mainTable 10 1)
+\o Active cell: 10 1 "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/TEST_LIB"
+\a nrListItemAction(cdsLibEditor->mainTable 11 0)
+\o Active cell: 11 0 "TO_2013_08"
+\a nrListItemAction(cdsLibEditor->mainTable 11 1)
+\o Active cell: 11 1 "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/TO_2013_08"
+\a nrListItemAction(cdsLibEditor->mainTable 12 0)
+\o Active cell: 12 0 "AMP_CONFIG"
+\a nrListItemAction(cdsLibEditor->mainTable 12 1)
+\o Active cell: 12 1 "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/AMP_CONFIG"
+\a nrListItemAction(cdsLibEditor->mainTable 13 0)
+\o Active cell: 13 0 "CHARACTERIZATION"
+\a nrListItemAction(cdsLibEditor->mainTable 13 1)
+\o Active cell: 13 1 "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/CHARACTERIZATION"
+\a nrListItemAction(cdsLibEditor->mainTable 14 0)
+\o Active cell: 14 0 "AMPLIFIERS"
+\a nrListItemAction(cdsLibEditor->mainTable 14 1)
+\o Active cell: 14 1 "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/AMPLIFIERS"
+\a nrListItemAction(cdsLibEditor->mainTable 15 0)
+\o Active cell: 15 0 "CHIP_FINISH_LIB"
+\a nrListItemAction(cdsLibEditor->mainTable 15 1)
+\o Active cell: 15 1 "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/CHIP_FINISH_LIB"
+\a nrListItemAction(cdsLibEditor->mainTable 16 0)
+\o Active cell: 16 0 "avTech"
+\a cdsLibEditor->fileSaveButton->value = t
+\a cdsLibEditor->fileExitButton->value = t
+\a nrSetWindowVisibility(cdsLibEditor "hide")
+\a exit(0)

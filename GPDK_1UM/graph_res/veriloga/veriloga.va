@@ -1,0 +1,30 @@
+// VerilogA for GPDK_1UM, graph_res, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module graph_res(MINUS, PLUS);
+inout MINUS;
+electrical MINUS;
+inout PLUS;
+electrical PLUS;
+parameter real w = 10u ;
+parameter real l = 10u ;
+parameter real r = 1K ;
+
+parameter R_sheet = 1.5e3;   //Ohm/square
+
+//parameter real model = graph_res ;
+
+real res_value;
+
+analog begin
+	
+	res_value = R_sheet*l/w;
+
+    I(PLUS,MINUS) <+ V(PLUS,MINUS)/res_value;
+end
+
+
+
+endmodule

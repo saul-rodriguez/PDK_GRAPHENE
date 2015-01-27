@@ -1,0 +1,55 @@
+********************************************************************************
+*** PVS HDRC SUMMARY
+***
+Execute on Date/Time    : Fri Aug 16 21:36:16 2013
+PVS HDRC VERSION        : 12.1.1-p076 Wed May  1 11:22:57 PDT 2013
+Rule Deck Path          : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/.technology.rul
+Rule Deck Title         :
+Layout System           : GDSII
+Layout Path             : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/test_drc.gds
+Current Directory       : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns
+User Name:              : saul
+Maximum Results         : 1000
+Maximum Result Vertices : 4096
+Layout Depth            : ALL
+Text Depth              : 0
+Summary File            : test_drc.sum
+Geometry Flagging       : ACUTE = NO  ANGLED = NO  SKEW = NO  OFFGRID = NO
+                          NONSIMPLE POLYGON = YES  NONSIMPLE PATH = NO
+Keep Empty Checks       : YES
+Excluded Cells          : 
+Layout Primary Cell     : test_drc
+ASCII DRC Error Report  : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_DRCruns/test_drc.drc_errors.ascii
+DRC Results Database    :
+--------------------------------------------------------------------------------
+--- RUNNING TIME WARNINGS
+---
+--------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER M_SD ....................... Total Original Geometry:        5 (       5)
+LAYER M_TOP ...................... Total Original Geometry:        5 (       5)
+LAYER TOX_N ...................... Total Original Geometry:        3 (       3)
+--------------------------------------------------------------------------------
+--- WARNINGS FROM FLAG STATEMENT
+---
+--------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK M_SD.SP.1 .................. Total Result      0 (       0)
+RULECHECK M_SD.W.1 ................... Total Result      0 (       0)
+RULECHECK M_TOP.SP.1 ................. Total Result      1 (       1)
+RULECHECK M_TOP.W.1 .................. Total Result      1 (       1)
+RULECHECK TOX_N.E.1 .................. Total Result      2 (       2)
+RULECHECK TOX_N.E.2 .................. Total Result      1 (       1)
+RULECHECK TOX_N.SP.1 ................. Total Result      0 (       0)
+RULECHECK TOX_N.W.1 .................. Total Result      1 (       1)
+--------------------------------------------------------------------------------
+--- SUMMARY
+---
+Total CPU Time                    : 0(s)
+Total Real Time                   : 0(s)
+Peak Memory Used                  : 4(M)
+Total Original Geometry           : 13 (13)
+Total DRC RuleChecks              : 8
+Total DRC Results                 : 6 (6)

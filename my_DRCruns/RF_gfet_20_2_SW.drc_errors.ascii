@@ -1,0 +1,140 @@
+RF_gfet_20_2_SW 2000
+M_TOP.W.1
+0 0 2 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+M_TOP.W.1: Metal M_TOP width must be >= 1.0 um
+M_TOP.SP.1
+0 0 2 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+M_TOP.SP.1: M_TOP to M_TOP spacing must be >= 2 um
+M_SD.W.1
+0 0 2 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+M_SD.W.1: Metal M_SD width must be >= 1.0 um
+M_SD.SP.1
+0 0 2 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+M_SD.SP.1: M_SD to M_SD spacing must be >= 2 um
+TOX_N.W.1
+0 0 2 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+TOX_N.W.1: TOX hole width must be >= 4.0 um
+TOX_N.SP.1
+0 0 2 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+TOX_N.SP.1: TOX hole to TOX hole spacing must be >= 4 um
+TOX_N.E.1
+0 0 2 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+TOX_N.E.1: TOX_N must be inside M_SD/M_TOP
+TOX_N.E.2
+0 0 2 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+TOX_N.E.2: Minimum M_SD/M_TOP to TOX_N enclosure >= 0.5 um
+M_TOP_gate
+6 6 1 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+p 1 24
+-350000 -80200
+-150000 -80200
+-150000 0
+38000 0
+38000 2000
+62000 2000
+62000 0
+64000 0
+64000 6000
+38000 6000
+38000 8000
+0 8000
+0 32000
+38000 32000
+38000 34000
+64000 34000
+64000 40000
+62000 40000
+62000 38000
+38000 38000
+38000 40000
+-150000 40000
+-150000 119800
+-350000 119800
+p 2 12
+-350000 219800
+-130000 219800
+-30000 119800
+10000 119800
+10000 156000
+90000 156000
+90000 119800
+130000 119800
+230000 219800
+450000 219800
+450000 419800
+-350000 419800
+p 3 8
+160000 0
+250000 0
+250000 -80200
+450000 -80200
+450000 119800
+250000 119800
+250000 40000
+160000 40000
+p 4 12
+-350000 -380200
+450000 -380200
+450000 -180200
+230000 -180200
+130000 -80200
+90000 -80200
+90000 -116000
+10000 -116000
+10000 -80200
+-30000 -80200
+-130000 -180200
+-350000 -180200
+p 5 4
+100000 34000
+110000 34000
+110000 40000
+100000 40000
+p 6 4
+100000 0
+110000 0
+110000 6000
+100000 6000
+PGATE
+2 2 1 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+p 1 4
+40000 34000
+60000 34000
+60000 38000
+40000 38000
+p 2 4
+40000 2000
+60000 2000
+60000 6000
+40000 6000
+PSD
+3 3 1 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc
+p 1 4
+40000 38000
+60000 38000
+60000 60000
+40000 60000
+p 2 4
+40000 6000
+60000 6000
+60000 34000
+40000 34000
+p 3 4
+40000 -23000
+60000 -23000
+60000 2000
+40000 2000
+RES_T
+0 0 1 Aug 23 11:25:23 2013
+Rule File Pathname: /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/GPDK_1UM/pv_files/test.drc

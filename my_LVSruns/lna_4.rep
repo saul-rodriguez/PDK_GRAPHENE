@@ -1,0 +1,24 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : lna_4.rep
+ERC Summary File         : result.sum
+LVS Comparison Report    : lna_4.rep.cls
+Layout Name              : /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns/lna_4.gds ("lna_4")
+User Name                : saul
+Creation Time            : Tue Jan 27 10:12:45 2015
+Current directory        : /afs/kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_LVSruns
+PVS Version              : 12.1.1-p076 Wed May  1 11:22:57 PDT 2013
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+

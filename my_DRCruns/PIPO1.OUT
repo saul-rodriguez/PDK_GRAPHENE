@@ -1,0 +1,64 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.12s.
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.5-64b 06/11/2013 20:04 (sjfnl003) $
+          : sub-version  IC6.1.5-64b.500.17 
+Started at: 27-Jan-2015  09:56:44
+User Name : saul
+Host Name : avril.it.kth.se
+Directory : /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+libInit.il file is loaded
+WARNING (XSTRM-20): Output Stream file '/afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.gds' already exists. It will be overwritten.
+INFO (XSTRM-288): The automatic layer mapping is done by StreamOut and the xStrmOut_layerMap.txt file is generated. This is because either the layer mapping is not provided or the XST_AUTO_LM value is used with the -layerMap option.
+
+Summary of Options :
+library                                 AMPLIFIERS
+strmFile                                /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/lna_4.gds
+topCell                                 lna_4
+view                                    layout
+runDir                                  /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns
+logFile                                 /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/PIPO1.LOG
+techLib                                 GPDK_1UM
+hierDepth                               32
+maxVertices                             2048
+userSkillFile                           /afs/kth.se/home/s/a/saul/FROMICT/ict.kth.se/saul/projects/PDK_GRAPHENE/my_DRCruns/strmout.il
+labelDepth                              32
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView AMPLIFIERS/power_rail/layout as STRUCTURE power_rail
+INFO (XSTRM-180): You have not used the objectMap option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the objectMap option to translate/preserve these objects using XStream. For details on the objectMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+INFO (XSTRM-223): 2. Translating cellView GPDK_1UM/ind_2n8/layout as STRUCTURE ind_2n8
+INFO (XSTRM-223): 3. Translating cellView CHIP_FINISH_LIB/RF_PAD_100/layout as STRUCTURE RF_PAD_100
+INFO (XSTRM-223): 4. Translating cellView CHIP_FINISH_LIB/PAD_100/layout as STRUCTURE PAD_100
+INFO (XSTRM-223): 5. Translating cellView AMPLIFIERS/lna_4/layout as STRUCTURE lna_4
+
+Summary of Objects Translated:
+	Scalar Instances:                       35
+	Array Instances:                        0
+	Polygons:                               7
+	Paths:                                  15
+	Rectangles:                             286
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	Pathsegs:                               0
+	Text:                                   11
+	Cells:                                  5
+
+Elapsed Time: 0.5s   User Time: 0.4s   CPU Time: 0.2s   Peak VM: 410KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

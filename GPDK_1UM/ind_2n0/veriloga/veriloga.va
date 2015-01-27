@@ -1,0 +1,20 @@
+// VerilogA for GPDK_1UM, ind_2n0, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module ind_2n0(MINUS, PLUS);
+inout MINUS;
+electrical MINUS;
+inout PLUS;
+electrical PLUS;
+parameter real r = 1 ;
+parameter real l = 2n ;
+
+//parameter real model = ind_2n0 ;
+
+analog begin
+    V(PLUS,MINUS) <+ l*ddt(I(PLUS,MINUS)) + r*I(PLUS,MINUS);
+end
+
+endmodule

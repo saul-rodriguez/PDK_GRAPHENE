@@ -1,0 +1,86 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  AMPLIFIERS
+* Top Cell Name: lna_4
+* View Name:     schematic
+* Netlisted on:  Jan 27 10:12:41 2015
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: AMPLIFIERS
+* Cell Name:    power_rail
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT power_rail GD VD
+*.PININFO GD:B VD:B
+CC6 VD GD 5.15657p $[mim_cap]
+CC5 VD GD 5.15657p $[mim_cap]
+CC4 VD GD 5.15657p $[mim_cap]
+CC3 VD GD 5.15657p $[mim_cap]
+CC2 VD GD 5.15657p $[mim_cap]
+CC1 VD GD 5.15657p $[mim_cap]
+CC0 VD GD 5.15657p $[mim_cap]
+CC12 VD GD 5.15657p $[mim_cap]
+.ENDS
+
+************************************************************************
+* Library Name: AMPLIFIERS
+* Cell Name:    lna_4
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT lna_4 BIAS1 BIAS2 BIAS3 BIAS4 gd IN OUT VD1 VD2
+*.PININFO BIAS1:B BIAS2:B BIAS3:B BIAS4:B gd:B IN:B OUT:B VD1:B VD2:B
+RR5 VD2 net08 100.000000 $[graph_res]
+RR3 VD2 net08 100.000000 $[graph_res]
+RR0 vout6 BIAS3 10.000000K $[graph_res]
+RR1 BIAS4 net29 10.000000K $[graph_res]
+RR2 BIAS2 net014 10.000000K $[graph_res]
+RR4 BIAS1 net02 10.000000K $[graph_res]
+XI13 gd VD2 / power_rail
+XI11 gd VD1 / power_rail
+XI12 gd VD2 / power_rail
+XI9 gd VD2 / power_rail
+XI17 gd VD1 / power_rail
+XI16 gd VD1 / power_rail
+XI8 gd VD1 / power_rail
+XI23 gd VD2 / power_rail
+XI22 gd VD2 / power_rail
+XI18 gd VD1 / power_rail
+XI21 gd VD1 / power_rail
+XI20 gd VD1 / power_rail
+XI19 gd VD1 / power_rail
+XI15 gd VD1 / power_rail
+XI14 gd VD1 / power_rail
+XI10 gd VD1 / power_rail
+MM10 net08 net29 net10 gfet W=50e-6 L=2u
+MM8 net10 vout6 gd gfet W=50e-6 L=2u
+MM5 vout4 net014 net5 gfet W=10u L=2u
+MM6 net5 net34 net3 gfet W=10u L=2u
+LL0 vout4 VD1 2.8n $[ind_2n8]
+LL2 net3 gd 2.8n $[ind_2n8]
+LL1 net02 net34 2.8n $[ind_2n8]
+CC11 net29 gd 5.15657p $[mim_cap]
+CC10 net014 gd 5.15657p $[mim_cap]
+CC9 net08 OUT 5.15657p $[mim_cap]
+CC1 net34 net3 157.92f $[mim_cap]
+CC4 vout4 vout6 5.15657p $[mim_cap]
+CC7 IN net02 5.15657p $[mim_cap]
+CC3 vout4 gd 725.143f $[mim_cap]
+.ENDS
+

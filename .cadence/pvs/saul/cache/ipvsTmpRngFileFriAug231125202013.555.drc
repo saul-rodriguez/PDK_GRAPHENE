@@ -1,0 +1,21 @@
+12 0
+1 M_TOP.W.1 1
+M_TOP.W.1: Metal M_TOP width must be >= 1.0 um
+1 M_TOP.SP.1 1
+M_TOP.SP.1: M_TOP to M_TOP spacing must be >= 2 um
+1 M_SD.W.1 1
+M_SD.W.1: Metal M_SD width must be >= 1.0 um
+1 M_SD.SP.1 1
+M_SD.SP.1: M_SD to M_SD spacing must be >= 2 um
+1 TOX_N.W.1 1
+TOX_N.W.1: TOX hole width must be >= 4.0 um
+1 TOX_N.SP.1 1
+TOX_N.SP.1: TOX hole to TOX hole spacing must be >= 4 um
+1 TOX_N.E.1 1
+TOX_N.E.1: TOX_N must be inside M_SD/M_TOP
+1 TOX_N.E.2 1
+TOX_N.E.2: Minimum M_SD/M_TOP to TOX_N enclosure >= 0.5 um
+1 M_TOP_gate 0
+1 PGATE 0
+1 PSD 0
+1 RES_T 0

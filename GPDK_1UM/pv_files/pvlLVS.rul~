@@ -1,0 +1,215 @@
+// PVL LVS RULE CHECK FOR GPDK_1UM
+
+// Version 0.1
+// Author: Saul Rodriguez
+// Date: 2013-08-12
+
+input_scale 2000;
+grid 5;
+unit -length u;
+//text_depth -primary;
+
+layout_preserve_case -property yes
+
+//layer_def empty 999;
+
+// Layer Definitions & Mappings
+
+layer_def M_SD 1000;
+layer_map 2 -datatype 0 1000;
+
+layer_def M_TOP 1001;
+layer_map 5 -datatype 0 1001;
+
+layer_def GRAPH 1003;
+layer_map 3 -datatype 0 1003;
+
+layer_def TOX_N 1004;
+layer_map 4 -datatype 0 1004;
+
+layer_def M_SD_pin 1005;
+layer_map 2 -texttype 251 1005;
+text_layer M_SD_pin;
+port -text_layer M_SD_pin;
+//attach M_SD_pin M_SD;
+
+layer_def M_TOP_pin 1006;
+layer_map 5 -texttype 251 1006;
+text_layer M_TOP_pin;
+port -text_layer M_TOP_pin;
+//attach M_TOP_pin M_TOP;
+
+layer_def MIM_CAP 1007;
+layer_map 25 -datatype 0 1007;
+
+layer_def IND 1008;
+layer_map 26 -datatype 0 1008;
+
+layer_def IND_P1 1009;
+layer_map 27 -datatype 0 1009;
+
+layer_def IND_P2 1010;
+layer_map 28 -datatype 0 1010;
+
+layer_def IND_P3 1011;
+layer_map 29 -datatype 0 1011;
+
+layer_def IND_P4 1012;
+layer_map 30 -datatype 0 1012;
+
+layer_def RES_GRAPH 1013;
+layer_map 31 -datatype 0 1013;
+
+//Creation of auxiliar layers for recognition 
+
+	// Removal of inductors from top metal
+not M_TOP IND M_TOP_conn;
+	// Removal of resistors from graphene
+not GRAPH RES_GRAPH GRAPH_aux;
+
+	// GFET
+//and M_TOP_conn GRAPH PGATE;
+//not GRAPH PGATE PSD;
+
+not M_TOP_conn M_SD M_TOP_gate;
+and M_TOP_gate GRAPH_aux PGATE;
+not GRAPH_aux PGATE PSD;
+
+
+//rule PGATE { copy PGATE; }
+//rule PSD { copy PSD; }
+
+	// MIMCAP
+and M_TOP_conn MIM_CAP M_CAP1;
+and M_SD MIM_CAP M_CAP2;
+and M_CAP1 M_CAP2 M_CAP;
+
+	// INDUCTORS
+and IND M_TOP IND_TOP;
+and IND M_SD IND_SD;
+or IND_TOP IND_SD IND_SEL;
+	
+		//ind_0n4 ---> 0001
+and IND_SEL IND_P1 LAUX1;
+not LAUX1 IND_P2 LAUX2;
+not LAUX2 IND_P3 LAUX3;
+not LAUX3 IND_P4 IND_1;
+
+		//ind_1n5 ---> 0010
+and IND_SEL IND_P2 LAUX4;
+not LAUX4 IND_P1 LAUX5;
+not LAUX5 IND_P3 LAUX6;
+not LAUX6 IND_P4 IND_2;
+
+		//ind_2n0 ---> 0011
+and LAUX1 LAUX4 LAUX7;
+not LAUX7 IND_P3 LAUX8;
+not LAUX8 IND_P4 IND_3; 
+
+		//ind_2n8 ---> 0100
+and IND_SEL IND_P3 LAUX9;
+not LAUX9 IND_P1 LAUX10;
+not LAUX10 IND_P2 LAUX11;
+not LAUX11 IND_P4 IND_4;
+
+rule IND_SEL { copy IND_SEL; }
+rule IND_1 { copy IND_1; }
+
+	// graph_res
+and RES_GRAPH GRAPH RES_1;
+not RES_1 M_SD RES;
+and RES_1 M_SD RES_TER;
+
+
+//and RES_GRAPH M_SD RES_TER;
+
+// Layer Connections
+
+connect M_SD M_TOP_conn -by TOX_N;
+connect M_SD PSD -by M_SD;
+connect M_TOP_gate M_TOP_conn -by M_TOP_conn;
+
+connect M_CAP1 M_TOP_conn -by M_TOP_conn;
+connect M_CAP2 M_SD -by M_SD;
+
+//connect IND_SEL M_TOP_conn -by M_TOP_conn;
+connect IND_1 M_TOP_conn -by M_TOP_conn;
+connect IND_2 M_TOP_conn -by M_TOP_conn;
+connect IND_3 M_TOP_conn -by M_TOP_conn;
+connect IND_4 M_TOP_conn -by M_TOP_conn;
+
+connect RES_TER M_SD -by M_SD;
+
+// Layer Attachments
+attach M_SD_pin M_SD;
+attach M_TOP_pin M_TOP_conn;
+
+// Device Recognition
+
+//extract gfet device
+
+device M(gfet) PGATE M_TOP_gate(G) PSD(D) PSD(S) [
+  property W, L;
+  W = perimeter_co_out(PGATE,PSD)*0.5;
+  L = perimeter_inside(PGATE,M_TOP_gate)*0.5;
+];
+
+
+
+//Parameter comparison options
+lvs_check_property M(gfet) W W -tolerance 3;
+lvs_check_property M(gfet) L L -tolerance 3;
+
+device C(mim_cap) M_CAP M_CAP1 (PLUS) M_CAP2 (MINUS) [
+	property W, L, c, Er, TOX;
+//	property c;
+	W = 10e-6;
+	L = 10e-6;
+	Er = 9.1;
+	TOX = 25e-9;	
+	c = area(M_CAP)*Er*8.854e-12/TOX;	
+//	c = 1e-12;
+];
+
+lvs_check_property C(mim_cap) c c -tolerance 3;
+
+device L(ind_0n4) IND_SEL IND_1 (PLUS) IND_1 (MINUS) [
+	property L;
+	L = 0.4e-9;
+];
+
+device L(ind_1n5) IND_SEL IND_2 (PLUS) IND_2 (MINUS) [
+	property L;
+	L = 1.5e-9;
+];
+
+device L(ind_2n0) IND_SEL IND_3 (PLUS) IND_3 (MINUS) [
+	property L;
+	L = 2e-9;
+];
+
+device L(ind_2n8) IND_SEL IND_4 (PLUS) IND_4 (MINUS) [
+	property L;
+	L = 2.8e-9;
+];
+
+device R(graph_res) RES RES_TER (PLUS) RES_TER (MINUS) [
+	property r,W,L,R_sheet;
+	R_sheet = 1e3;
+	L = perimeter_outside(RES,RES_TER)/2;
+	W = area(RES)/L;
+	r = R_sheet*L/W;	
+];
+
+lvs_check_property R(graph_res) r r -tolerance 3;
+
+//device R(graph_res) RES RES_T (PLUS) RES_T (MINUS) (PLUS MINUS) 
+//[
+//	property R,W,L,R_sheet;
+//	R_sheet = 1e3;
+//	L = perimeter_outside(RES,RES_T)/2;
+//	W = area(RES)/L;
+//	R = R_sheet*L/W;	
+//];
+
+

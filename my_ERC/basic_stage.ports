@@ -1,0 +1,7 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary basic_stage
+G2 3 G2 102000 -260000 M_TOP_conn
+DS2 1 DS2 -201400 21000 M_TOP_conn
+G1 4 G1 398000 -258000 M_TOP_conn
+GD 5 GD 702000 -252000 M_TOP_conn
+DS1 2 DS1 -202000 320000 M_TOP_conn

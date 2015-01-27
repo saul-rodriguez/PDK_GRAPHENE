@@ -1,0 +1,24 @@
+# File Created by Saul Rodriguez Duenas,u1vuponf at Tue Jan 27 09:34:00 2015
+# assisted by CdsLibEditor
+### cds.lib
+### *************************************************************************
+### General Purpose Reference Libraries
+### *************************************************************************
+#SOFTINCLUDE $AMSHOME/tools/inca/files/cds.lib
+DEFINE cdsDefTechLib /afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/IC615_500_171/tools/dfII/etc/cdsDefTechLib
+DEFINE analogLib /afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/IC615_500_171/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE functional /afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/IC615_500_171/tools/dfII/etc/cdslib/artist/functional
+DEFINE basic /afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/IC615_500_171/tools/dfII/etc/cdslib/basic
+DEFINE US_8ths /afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/IC615_500_171/tools/dfII/etc/cdslib/sheets/US_8ths
+DEFINE sample $CDSHOME/tools/dfII/samples/cdslib/sample
+DEFINE ahdlLib $CDSHOME/tools/dfII/samples/artist/ahdlLib
+DEFINE rfLib $CDSHOME/tools/dfII/samples/artist/rfLib
+DEFINE pllLib $CDSHOME/tools/dfII/samples/artist/pllLib
+DEFINE GPDK_1UM ./GPDK_1UM
+DEFINE TEST_LIB ./TEST_LIB
+DEFINE TO_2013_08 ./TO_2013_08
+DEFINE AMP_CONFIG ./AMP_CONFIG
+DEFINE CHARACTERIZATION ./CHARACTERIZATION
+DEFINE AMPLIFIERS ./AMPLIFIERS
+DEFINE CHIP_FINISH_LIB ./CHIP_FINISH_LIB
+DEFINE avTech /afs/ict.kth.se/pkg/designkits/ekt/cdc/installs/ASSURA41/tools/assura/etc/avtech/avTech

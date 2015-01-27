@@ -1,0 +1,57 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.5-64b 03/11/2013 23:45 (sjfdl074) $
+          : sub-version  IC6.1.5-64b.500.16.2 
+Started at: 28-Aug-2013  17:41:07
+User Name : saul
+Host Name : atlantis.it.kth.se
+Directory : /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+INFO (XSTRM-288): The automatic layer mapping is done by StreamOut and the xStrmOut_layerMap.txt file is generated. This is because either the layer mapping is not provided or the XST_AUTO_LM value is used with the -layerMap option.
+
+Summary of Options :
+library                                 AMPLIFIERS
+strmFile                                /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.gds
+topCell                                 basic_resistor
+view                                    layout
+runDir                                  /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC
+logFile                                 /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/PIPO1.LOG
+techLib                                 GPDK_1UM
+hierDepth                               32
+maxVertices                             2048
+userSkillFile                           /afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/strmout.il
+labelDepth                              32
+case                                    Preserve
+convertDot                              node
+
+INFO (XSTRM-223): 1. Translating cellView AMPLIFIERS/basic_resistor/layout as STRUCTURE basic_resistor
+INFO (XSTRM-180): You have not used the objectMap option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the objectMap option to translate/preserve these objects using XStream. For details on the objectMap option, refer to the "Design Data Translator's Reference" guide for XStream.
+
+Summary of Objects Translated:
+	Scalar Instances:                       0
+	Array Instances:                        0
+	Polygons:                               0
+	Paths:                                  0
+	Rectangles:                             6
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	Pathsegs:                               0
+	Text:                                   0
+	Cells:                                  1
+
+Elapsed Time: 0.6s   User Time: 0.4s   CPU Time: 0.2s   Peak VM: 330KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '0' warning(s) found.

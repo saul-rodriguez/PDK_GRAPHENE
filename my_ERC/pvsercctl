@@ -1,0 +1,12 @@
+text_depth -primary;
+virtual_connect -colon no;
+virtual_connect -semicolon yes;
+virtual_connect -report no;
+lvs_abort -softchk no;
+lvs_find_shorts no;
+sconnect_upper_shape_count no;
+report_summary -erc "basic_resistor.sum" -replace;
+max_results -erc 1000;
+results_db -erc "/afs/ict.kth.se/home/s/a/saul/projects/PDK_GRAPHENE/my_ERC/basic_resistor.erc_errors.ascii" -ascii;
+lvs_report_opt -none;
+abort_on_layout_error yes;

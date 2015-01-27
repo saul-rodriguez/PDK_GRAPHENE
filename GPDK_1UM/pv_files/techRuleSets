@@ -1,0 +1,5 @@
+pvsRuleSet( "default"
+       (DrcRules             "./pvlDRC.rul" )
+       (LvsRules             "./pvlLVS.rul" )
+       (ErcRules             "./pvlLVS.rul" )
+)

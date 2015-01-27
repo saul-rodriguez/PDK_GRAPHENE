@@ -1,0 +1,28 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                          *
+*                                                       *
+* Cell Name  : basic_resistor                           *
+* Netlisted  : Wed Aug 28 17:41:08 2013                 *
+* PVS Version: 12.1.1-p076 Wed May  1 11:22:57 PDT 2013 *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 L(ind_0n4) IND_SEL IND_1(PLUS) IND_1(MINUS)
+*.DEVTMPLT 1 L(ind_1n5) IND_SEL IND_2(PLUS) IND_2(MINUS)
+*.DEVTMPLT 2 L(ind_2n0) IND_SEL IND_3(PLUS) IND_3(MINUS)
+*.DEVTMPLT 3 L(ind_2n8) IND_SEL IND_4(PLUS) IND_4(MINUS)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: L                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt L PLUS MINUS
+.ends L
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: basic_resistor                              *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt basic_resistor
+** N=4 EP=0 FDC=3
+R0 4 3 1000 L=2e-05 W=2e-05 R_sheet=1000 $[graph_res] $X=18000 $Y=0
+R1 3 2 3000 L=6e-05 W=2e-05 R_sheet=1000 $[graph_res] $X=78000 $Y=0
+R2 2 1 1000 L=2e-05 W=2e-05 R_sheet=1000 $[graph_res] $X=218000 $Y=0
+.ends basic_resistor

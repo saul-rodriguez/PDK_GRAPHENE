@@ -1,0 +1,35 @@
+procedure(graph_res_l(param)
+  prog( (l)
+     l = cdfParseFloatString(cdfgData->l->value)
+     when(l<1e-6 
+       warn("Parameter l is smaller than 1e-6. Setting to minimal value" )
+
+       cdfgData->l->value = "1u"
+
+     )
+         l = cdfParseFloatString(cdfgData->l->value)
+		 w = cdfParseFloatString(cdfgData->w->value)
+         R_sheet = cdfParseFloatString(cdfgData->R_sheet->value)
+
+         res_value = R_sheet*l/w
+         cdfgData->r->value = sprintf(nil "%f" res_value)
+  )
+)
+
+procedure(graph_res_w(param)
+  prog( (w)
+     w = cdfParseFloatString(cdfgData->w->value)
+     when(w<1e-6 
+       warn("Parameter w is smaller than 1e-6. Setting to minimal value" )
+
+       cdfgData->w->value = "1u"
+
+     )
+         l = cdfParseFloatString(cdfgData->l->value)
+		 w = cdfParseFloatString(cdfgData->w->value)
+         R_sheet = cdfParseFloatString(cdfgData->R_sheet->value)
+
+         res_value = R_sheet*l/w
+         cdfgData->r->value = sprintf(nil "%f" res_value)
+  )
+)

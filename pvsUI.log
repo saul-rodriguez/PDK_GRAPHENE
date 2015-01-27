@@ -1,0 +1,32 @@
+Parameters:
+	-runDir
+	/nobackup/saul/temp
+	-ossdir
+	/nobackup/saul/temp/
+	-cellmap
+	/nobackup/saul/temp/lay_cellMap.txt
+	-ppid
+	6490
+	-form
+	-viewer
+	virtuoso
+	-schview
+	schematic
+	-tag
+	unknown
+
+
+Checking out SoftShare license Phys_Ver_Sys_Results_Mgr 12.1 ... succeeded.
+Item with name 'PVS Build Date' is already on the list - ignore
+Item with name 'PVS Job Time' is already on the list - ignore
+Item with name 'Layout GDSII' and path '/nobackup/saul/temp/lna_4.gds' is already on the list - skip adding
+Item with name 'Rule File' and path '/nobackup/saul/temp/.technology.rul' is already on the list - skip adding
+Item with name 'Run Directory' is already on the list - ignore
+Item with name 'PVS Build Date' is already on the list - ignore
+Item with name 'PVS Job Time' is already on the list - ignore
+Item with name 'Run Directory' is already on the list - ignore
+Item with name 'PVS Build Date' is already on the list - ignore
+Item with name 'PVS Job Time' is already on the list - ignore
+starting pvsProbeServer: port= 56226
+Starting probe server on port: 56226
+Checking in all SoftShare licenses.

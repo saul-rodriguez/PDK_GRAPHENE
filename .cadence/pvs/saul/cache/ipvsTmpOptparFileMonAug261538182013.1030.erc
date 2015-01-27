@@ -1,0 +1,36 @@
+# This PVS GUI forms presets file is created automatically to be used in internal flow.
+# Do not edit it unless you 100% sure what you do!
+
+# PVS Version 12.1.1-p076
+
+[ pvAutoOptions.RunANYFLOW ]
+AbortOnSoftChk "FALSE"
+ComparePortNamesDuringComparison "FALSE"
+SconnectUpperShapeCount "FALSE"
+IgnorePortsDuringComparison "FALSE"
+VirtualConnectColon "FALSE"
+VirtualConnectSemicolon "TRUE"
+VirtualConnectReport "FALSE"
+VirtualConnectByNameSelector "DO NOT CONNECT BY NAME"
+VirtualConnectNames ""
+TextDepthSelector "PRIMARY"
+TextDepth ""
+NetNamesPower ""
+GlobalsOrPortsPower "FALSE"
+NetNamesGround ""
+GlobalsOrPortsGround "FALSE"
+FindShorts "FALSE"
+Flatten "FALSE"
+BreakingAmbiguitiesThreshold "32"
+ReportMismatchedNetsLimit "100"
+ReportLimit "1000"
+VerticesPerPolygon "4096"
+ReportFileWriteMode "Replace File"
+ReportStatisticsByCell "FALSE"
+RecognizeGatesSet "ALL"
+InterposerCellName ""
+InterposerMode "FALSE"
+InterposerSourceLayoutOption "layout&schematic"
+ReportOption_-none "TRUE"
+FilterOptionsLayout ""
+FilterOptionsSchematic ""
