@@ -1,7 +1,7 @@
 envSetVal("license" "ADELicenseCheckoutOrder" 'string "GXL,XL")
 
 printf("\n\n***********************************************************************\n")
-printf("*                      PDK LICENSE:\n")
+printf("*                      GPDK 1UM V0.1 LICENSE:\n")
 printf("* GPDK_1UM is free software: you can redistribute it and/or modify it under\n")
 printf("* the terms of the GNU General Public License as published by the Free Software\n")
 printf("* Foundation, either version 3 of the License, or (at your option) any later version.\n")
